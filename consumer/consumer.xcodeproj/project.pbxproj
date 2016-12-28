@@ -36,6 +36,13 @@
 		F58A57081E134C5B00D0193C /* DDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A57071E134C5B00D0193C /* DDModel.swift */; };
 		F58A570A1E134C5F00D0193C /* _DDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A57091E134C5F00D0193C /* _DDModel.swift */; };
 		F58A570C1E134D8500D0193C /* DDDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A570B1E134D8500D0193C /* DDDatabaseManager.swift */; };
+		F58A570F1E135B4900D0193C /* DDVenueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A570E1E135B4900D0193C /* DDVenueListViewController.swift */; };
+		F58A57121E135B7900D0193C /* DDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A57111E135B7900D0193C /* DDViewController.swift */; };
+		F58A57141E135BDF00D0193C /* DDString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A57131E135BDF00D0193C /* DDString.swift */; };
+		F58A57171E135CEA00D0193C /* Atrian_3.otf in Resources */ = {isa = PBXBuildFile; fileRef = F58A57161E135CEA00D0193C /* Atrian_3.otf */; };
+		F58A57191E135CEE00D0193C /* Atrian_1.otf in Resources */ = {isa = PBXBuildFile; fileRef = F58A57181E135CEE00D0193C /* Atrian_1.otf */; };
+		F58A571B1E135D1600D0193C /* DDFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A571A1E135D1600D0193C /* DDFont.swift */; };
+		F58A571D1E135E5D00D0193C /* DDColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A571C1E135E5D00D0193C /* DDColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +65,13 @@
 		F58A57071E134C5B00D0193C /* DDModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDModel.swift; sourceTree = "<group>"; };
 		F58A57091E134C5F00D0193C /* _DDModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _DDModel.swift; sourceTree = "<group>"; };
 		F58A570B1E134D8500D0193C /* DDDatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDDatabaseManager.swift; sourceTree = "<group>"; };
+		F58A570E1E135B4900D0193C /* DDVenueListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDVenueListViewController.swift; sourceTree = "<group>"; };
+		F58A57111E135B7900D0193C /* DDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDViewController.swift; sourceTree = "<group>"; };
+		F58A57131E135BDF00D0193C /* DDString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDString.swift; sourceTree = "<group>"; };
+		F58A57161E135CEA00D0193C /* Atrian_3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Atrian_3.otf; sourceTree = "<group>"; };
+		F58A57181E135CEE00D0193C /* Atrian_1.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Atrian_1.otf; sourceTree = "<group>"; };
+		F58A571A1E135D1600D0193C /* DDFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDFont.swift; sourceTree = "<group>"; };
+		F58A571C1E135E5D00D0193C /* DDColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +124,8 @@
 		F58A56C61E133B5C00D0193C /* consumer */ = {
 			isa = PBXGroup;
 			children = (
+				F58A57151E135CD300D0193C /* Supporting files */,
+				F58A570D1E135B2A00D0193C /* Sections */,
 				F58A56E71E1342D300D0193C /* Models */,
 				F58A56DD1E133D6600D0193C /* Utilities */,
 				F58A56DC1E133D4200D0193C /* Data Synchronization */,
@@ -133,6 +149,7 @@
 		F58A56DD1E133D6600D0193C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F58A57101E135B6700D0193C /* Extensions */,
 				F58A56DE1E133D9400D0193C /* DDNetworkingManager.swift */,
 				F58A570B1E134D8500D0193C /* DDDatabaseManager.swift */,
 			);
@@ -170,6 +187,34 @@
 			name = ModelMachine;
 			path = Model/ModelMachine;
 			sourceTree = SOURCE_ROOT;
+		};
+		F58A570D1E135B2A00D0193C /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				F58A570E1E135B4900D0193C /* DDVenueListViewController.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		F58A57101E135B6700D0193C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F58A57111E135B7900D0193C /* DDViewController.swift */,
+				F58A57131E135BDF00D0193C /* DDString.swift */,
+				F58A571A1E135D1600D0193C /* DDFont.swift */,
+				F58A571C1E135E5D00D0193C /* DDColor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F58A57151E135CD300D0193C /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				F58A57181E135CEE00D0193C /* Atrian_1.otf */,
+				F58A57161E135CEA00D0193C /* Atrian_3.otf */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -242,7 +287,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F58A56D51E133B5C00D0193C /* LaunchScreen.storyboard in Resources */,
+				F58A57171E135CEA00D0193C /* Atrian_3.otf in Resources */,
 				F58A56D21E133B5C00D0193C /* Assets.xcassets in Resources */,
+				F58A57191E135CEE00D0193C /* Atrian_1.otf in Resources */,
 				F58A56CD1E133B5C00D0193C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,15 +364,20 @@
 			files = (
 				F58A56E11E1340BF00D0193C /* DDVenueAdapter.swift in Sources */,
 				F58A56EA1E1342E800D0193C /* DDModel.xcdatamodeld in Sources */,
+				F58A57141E135BDF00D0193C /* DDString.swift in Sources */,
 				F58A56FF1E1348F600D0193C /* DDVenue.swift in Sources */,
 				F58A57041E1348F600D0193C /* _DDVenueMenu.swift in Sources */,
+				F58A571B1E135D1600D0193C /* DDFont.swift in Sources */,
+				F58A570F1E135B4900D0193C /* DDVenueListViewController.swift in Sources */,
 				F58A56C81E133B5C00D0193C /* DDAppDelegate.swift in Sources */,
 				F58A57001E1348F600D0193C /* DDVenueMenu.swift in Sources */,
 				F58A57081E134C5B00D0193C /* DDModel.swift in Sources */,
 				F58A570A1E134C5F00D0193C /* _DDModel.swift in Sources */,
 				F58A56DF1E133D9400D0193C /* DDNetworkingManager.swift in Sources */,
+				F58A57121E135B7900D0193C /* DDViewController.swift in Sources */,
 				F58A57031E1348F600D0193C /* _DDVenue.swift in Sources */,
 				F58A570C1E134D8500D0193C /* DDDatabaseManager.swift in Sources */,
+				F58A571D1E135E5D00D0193C /* DDColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
