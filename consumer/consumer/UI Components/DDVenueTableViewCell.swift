@@ -15,6 +15,8 @@ class DDVenueTableViewCell: UITableViewCell {
     var venue: DDVenue? {
         didSet {
             
+            self.clearUI()
+            
             // Set UI for venue object
             // Safety check
             guard let venue = venue else { return }
@@ -67,6 +69,11 @@ class DDVenueTableViewCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        
+        self.clearUI()
+    }
+    
+    func clearUI() {
         
         self.priceLabel.text = ""
         self.timeLabel.text = ""

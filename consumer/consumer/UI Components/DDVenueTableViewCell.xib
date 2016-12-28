@@ -34,7 +34,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wc8-ei-RFw">
-                        <rect key="frame" x="123" y="12" width="189" height="21"/>
+                        <rect key="frame" x="123" y="12" width="177" height="21"/>
                         <fontDescription key="fontDescription" name="Atrian3" family="Atrian 3" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -53,12 +53,12 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="12" id="BIw-s0-r8g"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Atrian1" family="Atrian 1" pointSize="15"/>
+                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhJ-DV-BMI">
-                        <rect key="frame" x="247" y="59" width="65" height="12"/>
+                        <rect key="frame" x="247" y="54" width="65" height="12"/>
                         <fontDescription key="fontDescription" name="Atrian1" family="Atrian 1" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -67,17 +67,17 @@
                 <constraints>
                     <constraint firstItem="yz9-MX-Z3b" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="7" id="0WS-zL-3po"/>
                     <constraint firstItem="bib-gG-grn" firstAttribute="top" secondItem="Wc8-ei-RFw" secondAttribute="bottom" constant="3" id="0ZN-8j-ri4"/>
-                    <constraint firstItem="mhJ-DV-BMI" firstAttribute="top" secondItem="Wc8-ei-RFw" secondAttribute="bottom" constant="26" id="5jy-y6-lTU"/>
-                    <constraint firstItem="Wc8-ei-RFw" firstAttribute="trailing" secondItem="mhJ-DV-BMI" secondAttribute="trailing" id="89f-Iz-mhx"/>
+                    <constraint firstItem="mhJ-DV-BMI" firstAttribute="top" secondItem="Wc8-ei-RFw" secondAttribute="bottom" constant="21" id="5jy-y6-lTU"/>
+                    <constraint firstItem="Wc8-ei-RFw" firstAttribute="trailing" secondItem="mhJ-DV-BMI" secondAttribute="trailing" constant="-12" id="89f-Iz-mhx"/>
                     <constraint firstAttribute="bottomMargin" secondItem="cFb-h3-n2c" secondAttribute="bottom" constant="5" id="Ai0-zq-3rO"/>
                     <constraint firstItem="mhJ-DV-BMI" firstAttribute="leading" secondItem="cFb-h3-n2c" secondAttribute="trailing" constant="15" id="CWY-XE-GV4"/>
-                    <constraint firstItem="mhJ-DV-BMI" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="Qok-Lr-0k2"/>
+                    <constraint firstItem="mhJ-DV-BMI" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="-5" id="Qok-Lr-0k2"/>
                     <constraint firstAttribute="trailingMargin" secondItem="bib-gG-grn" secondAttribute="trailing" constant="80" id="Ruz-Kq-hYp"/>
                     <constraint firstItem="Wc8-ei-RFw" firstAttribute="leading" secondItem="yz9-MX-Z3b" secondAttribute="trailing" constant="8" symbolic="YES" id="SP9-LJ-S0X"/>
                     <constraint firstItem="bib-gG-grn" firstAttribute="trailing" secondItem="cFb-h3-n2c" secondAttribute="trailing" id="i0k-lu-xTg"/>
                     <constraint firstItem="yz9-MX-Z3b" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="iFi-XD-wcK"/>
                     <constraint firstItem="Wc8-ei-RFw" firstAttribute="leading" secondItem="bib-gG-grn" secondAttribute="leading" id="rQH-R4-WRe"/>
-                    <constraint firstItem="Wc8-ei-RFw" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="tbS-Zo-Mt3"/>
+                    <constraint firstItem="Wc8-ei-RFw" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-12" id="tbS-Zo-Mt3"/>
                     <constraint firstItem="bib-gG-grn" firstAttribute="leading" secondItem="cFb-h3-n2c" secondAttribute="leading" id="uBl-Vo-0vL"/>
                     <constraint firstItem="yz9-MX-Z3b" firstAttribute="top" secondItem="Wc8-ei-RFw" secondAttribute="top" id="uQJ-dF-EVB"/>
                     <constraint firstItem="cFb-h3-n2c" firstAttribute="top" secondItem="bib-gG-grn" secondAttribute="bottom" constant="6" id="xRu-z1-mXs"/>
