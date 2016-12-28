@@ -8,6 +8,7 @@ public enum DDVenueAttributes: String {
     case asapTimeMin = "asapTimeMin"
     case category = "category"
     case deliveryFeeCent = "deliveryFeeCent"
+    case favorite = "favorite"
     case name = "name"
     case tags = "tags"
     case urlString = "urlString"
@@ -60,6 +61,9 @@ open class _DDVenue: DDModel {
 
     @NSManaged open
     var deliveryFeeCent: Int
+
+    @NSManaged open
+    var favorite: Bool
 
     @NSManaged open
     var name: String?

@@ -46,6 +46,7 @@
 		F58A571F1E1362DC00D0193C /* DDFavoriteVenueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A571E1E1362DC00D0193C /* DDFavoriteVenueListViewController.swift */; };
 		F58A57231E13641400D0193C /* DDVenueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A57211E13641400D0193C /* DDVenueTableViewCell.swift */; };
 		F58A57241E13641400D0193C /* DDVenueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F58A57221E13641400D0193C /* DDVenueTableViewCell.xib */; };
+		F58A57321E1410DE00D0193C /* DDVenueDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A57311E1410DE00D0193C /* DDVenueDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		F58A571E1E1362DC00D0193C /* DDFavoriteVenueListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDFavoriteVenueListViewController.swift; sourceTree = "<group>"; };
 		F58A57211E13641400D0193C /* DDVenueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDVenueTableViewCell.swift; sourceTree = "<group>"; };
 		F58A57221E13641400D0193C /* DDVenueTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDVenueTableViewCell.xib; sourceTree = "<group>"; };
+		F58A57311E1410DE00D0193C /* DDVenueDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDVenueDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 			children = (
 				F58A570E1E135B4900D0193C /* DDVenueListViewController.swift */,
 				F58A571E1E1362DC00D0193C /* DDFavoriteVenueListViewController.swift */,
+				F58A57311E1410DE00D0193C /* DDVenueDetailsViewController.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				F58A57001E1348F600D0193C /* DDVenueMenu.swift in Sources */,
 				F58A57081E134C5B00D0193C /* DDModel.swift in Sources */,
 				F58A570A1E134C5F00D0193C /* _DDModel.swift in Sources */,
+				F58A57321E1410DE00D0193C /* DDVenueDetailsViewController.swift in Sources */,
 				F58A56DF1E133D9400D0193C /* DDNetworkingManager.swift in Sources */,
 				F58A57121E135B7900D0193C /* DDViewController.swift in Sources */,
 				F58A57031E1348F600D0193C /* _DDVenue.swift in Sources */,
