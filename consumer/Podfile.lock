@@ -1,0 +1,50 @@
+PODS:
+  - Alamofire (4.0.0)
+  - CoreStore (3.0.0)
+  - EZSwiftExtensions (1.8)
+  - PromiseKit (4.1.0):
+    - PromiseKit/Foundation (= 4.1.0)
+    - PromiseKit/QuartzCore (= 4.1.0)
+    - PromiseKit/UIKit (= 4.1.0)
+  - PromiseKit/CorePromise (4.1.0)
+  - PromiseKit/Foundation (4.1.0):
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (4.1.0):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (4.1.0):
+    - PromiseKit/CorePromise
+  - SwiftyJSON (3.0.0)
+
+DEPENDENCIES:
+  - Alamofire (= 4.0.0)
+  - CoreStore (from `git@github.com:JohnEstropia/CoreStore.git`, branch `swift3_develop`)
+  - EZSwiftExtensions
+  - PromiseKit (~> 4.0)
+  - SwiftyJSON (from `https://github.com/appsailor/SwiftyJSON.git`, branch `swift3`)
+
+EXTERNAL SOURCES:
+  CoreStore:
+    :branch: swift3_develop
+    :git: git@github.com:JohnEstropia/CoreStore.git
+  SwiftyJSON:
+    :branch: swift3
+    :git: https://github.com/appsailor/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  CoreStore:
+    :commit: 518bb134f9e38fbb6b85427b281240d11601dfb5
+    :git: git@github.com:JohnEstropia/CoreStore.git
+  SwiftyJSON:
+    :commit: de73429b38b8994f614fb27c5ec094bb8a4833f2
+    :git: https://github.com/appsailor/SwiftyJSON.git
+
+SPEC CHECKSUMS:
+  Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
+  CoreStore: 4e61fc46e34e20887254afa7b083c989322e5fea
+  EZSwiftExtensions: b58e0fe7702e30c4f01bd039658fe84b4fdf5bd5
+  PromiseKit: c98453ff78544c0ad5bb0ea980782e6875f47978
+  SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
+
+PODFILE CHECKSUM: 8f280975856398f0b059065b6a82bdbc16f96840
+
+COCOAPODS: 1.1.1
