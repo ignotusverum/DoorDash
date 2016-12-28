@@ -10,6 +10,8 @@ import UIKit
 
 class DDVenueListViewController: UIViewController {
 
+    
+    
     // MARK: - Controller lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
