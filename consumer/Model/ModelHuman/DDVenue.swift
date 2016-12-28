@@ -15,5 +15,26 @@ import PromiseKit
 open class DDVenue: _DDVenue {
 
 	// MARK: - Fetching logic
+    class func fetchObject(objectID: String, context: NSManagedObjectContext = NSManagedObjectContext.mr_rootSaving()) throws -> DDVenue? {
+        
+        return try DDVenue.modelFetch(objectID: objectID, context:context) as? DDVenue
+    }
     
+    class func fetchOrInsert(json: JSON, context: NSManagedObjectContext = NSManagedObjectContext.mr_rootSaving()) throws -> DDVenue? {
+        
+        return try DDVenue.modelFetchOrInsert(json:
+            json, context: context) as? DDVenue
+    }
+    
+    
+    override func setValue(json: JSON, context: NSManagedObjectContext) {
+        
+        super.setValue(json: json)
+        
+        if self.modelID != nil {
+            
+            
+            
+        }
+    }
 }
