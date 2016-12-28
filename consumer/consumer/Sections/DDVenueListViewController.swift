@@ -17,4 +17,13 @@ class DDVenueListViewController: UIViewController {
         // Set title
         self.setTitle("DoorDash")
     }
+    
+    // MARK: - Actions
+    @IBAction func mapActionpPressed(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func searchButtonPressed(_ sender: UIButton) {
+        
+    }
 }
