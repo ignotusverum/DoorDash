@@ -24,13 +24,33 @@ class DDVenueAdapter: NSObject {
     
     // Fetch venues with location
     // lat / lng
-    class func fetch(lat: Double, lng: Double) {
+    class func fetch(lat: Double, lng: Double)-> Promise<[DDVenue]> {
         
         // Does not accept params - returns 400
         let netman = DDNetworkingManager.shared
-        netman.request(.get, path: "store_search/?lat=\(lat)&lng=\(lng)").then { result-> Void in
+        return netman.request(.get, path: "store_search/?lat=\(lat)&lng=\(lng)").then { response-> [DDVenue] in
             
-            print(result)
+            // Result array
+            var resultArray = [DDVenue]()
+            
+            do {
+                
+                // Parse array
+                if let responseArray = response.array {
+                    for json in responseArray {
+                        // venue object
+                        let venue = try DDVenue.fetchOrInsert(json: json)
+                        if let venue = venue {
+                            
+                            // Add to result array
+                            resultArray.append(venue)
+                        }
+                    }
+                }
+            }
+            catch { }
+            
+            return resultArray
         }
     }
 }

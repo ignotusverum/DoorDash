@@ -9,6 +9,10 @@ public enum DDVenueMenuAttributes: String {
     case name = "name"
 }
 
+public enum DDVenueMenuRelationships: String {
+    case venue = "venue"
+}
+
 open class _DDVenueMenu: DDModel {
 
     // MARK: - Class methods
@@ -19,6 +23,15 @@ open class _DDVenueMenu: DDModel {
 
     override open class func entity(managedObjectContext: NSManagedObjectContext) -> NSEntityDescription? {
         return NSEntityDescription.entity(forEntityName: self.entityName(), in: managedObjectContext)
+    }
+
+    @nonobjc
+    open class func fetchRequest() -> NSFetchRequest<DDVenueMenu> {
+        if #available(iOS 10.0, tvOS 10.0, watchOS 3.0, macOS 10.12, *) {
+            return NSManagedObject.fetchRequest() as! NSFetchRequest<DDVenueMenu>
+        } else {
+            return NSFetchRequest(entityName: self.entityName())
+        }
     }
 
     // MARK: - Life cycle methods
@@ -41,6 +54,9 @@ open class _DDVenueMenu: DDModel {
     var name: String?
 
     // MARK: - Relationships
+
+    @NSManaged open
+    var venue: DDVenue?
 
 }
 

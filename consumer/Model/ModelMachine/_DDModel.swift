@@ -20,6 +20,15 @@ open class _DDModel: NSManagedObject {
         return NSEntityDescription.entity(forEntityName: self.entityName(), in: managedObjectContext)
     }
 
+    @nonobjc
+    open class func fetchRequest() -> NSFetchRequest<DDModel> {
+        if #available(iOS 10.0, tvOS 10.0, watchOS 3.0, macOS 10.12, *) {
+            return NSManagedObject.fetchRequest() as! NSFetchRequest<DDModel>
+        } else {
+            return NSFetchRequest(entityName: self.entityName())
+        }
+    }
+
     // MARK: - Life cycle methods
 
     public override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?) {
@@ -34,7 +43,7 @@ open class _DDModel: NSManagedObject {
     // MARK: - Properties
 
     @NSManaged open
-    var modelID: String?
+    var modelID: Int
 
     // MARK: - Relationships
 

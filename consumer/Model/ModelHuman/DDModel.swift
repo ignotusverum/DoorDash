@@ -17,12 +17,12 @@ open class DDModel: _DDModel {
 
     var json: JSON?
     
-    class func modelFetch(objectID: String, context: NSManagedObjectContext = NSManagedObjectContext.mr_default()) throws -> Any? {
+    class func modelFetch(objectID: Int, context: NSManagedObjectContext = NSManagedObjectContext.mr_default()) throws -> Any? {
         
         var result: Any?
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: self.entityName())
-        let predicate = NSPredicate(format:"%K == %@", DDModelAttributes.modelID.rawValue, objectID)
+        let predicate = NSPredicate(format:"%K == \(objectID)", DDModelAttributes.modelID.rawValue)
         
         fetchRequest.predicate = predicate
         
@@ -36,7 +36,7 @@ open class DDModel: _DDModel {
         
         var result: Any?
         
-        if let modelObjectID = json["id"].string {
+        if let modelObjectID = json["id"].int {
             
             result = try self.modelFetch(objectID: modelObjectID, context: context)
             
@@ -58,11 +58,9 @@ open class DDModel: _DDModel {
             self.json = json
         }
         
-        if let modelID = json["id"].string {
+        if let modelID = json["id"].int {
             
-            if self.modelID != modelID {
-                self.modelID = modelID
-            }
+            self.modelID = modelID
         }
     }
 }

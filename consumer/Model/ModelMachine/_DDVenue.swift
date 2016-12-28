@@ -5,11 +5,17 @@ import Foundation
 import CoreData
 
 public enum DDVenueAttributes: String {
-    case asapTime = "asapTime"
-    case deliveryFee = "deliveryFee"
+    case asapTimeMin = "asapTimeMin"
+    case category = "category"
+    case deliveryFeeCent = "deliveryFeeCent"
     case name = "name"
+    case tags = "tags"
     case urlString = "urlString"
     case venueDescription = "venueDescription"
+}
+
+public enum DDVenueRelationships: String {
+    case menu = "menu"
 }
 
 open class _DDVenue: DDModel {
@@ -22,6 +28,15 @@ open class _DDVenue: DDModel {
 
     override open class func entity(managedObjectContext: NSManagedObjectContext) -> NSEntityDescription? {
         return NSEntityDescription.entity(forEntityName: self.entityName(), in: managedObjectContext)
+    }
+
+    @nonobjc
+    open class func fetchRequest() -> NSFetchRequest<DDVenue> {
+        if #available(iOS 10.0, tvOS 10.0, watchOS 3.0, macOS 10.12, *) {
+            return NSManagedObject.fetchRequest() as! NSFetchRequest<DDVenue>
+        } else {
+            return NSFetchRequest(entityName: self.entityName())
+        }
     }
 
     // MARK: - Life cycle methods
@@ -37,14 +52,20 @@ open class _DDVenue: DDModel {
 
     // MARK: - Properties
 
-    @NSManaged public
-    var asapTime: NSNumber?
+    @NSManaged open
+    var asapTimeMin: Int
 
-    @NSManaged public
-    var deliveryFee: NSNumber?
+    @NSManaged open
+    var category: String?
+
+    @NSManaged open
+    var deliveryFeeCent: Int
 
     @NSManaged open
     var name: String?
+
+    @NSManaged open
+    var tags: AnyObject?
 
     @NSManaged open
     var urlString: String?
@@ -53,6 +74,9 @@ open class _DDVenue: DDModel {
     var venueDescription: String?
 
     // MARK: - Relationships
+
+    @NSManaged open
+    var menu: DDVenueMenu?
 
 }
 
