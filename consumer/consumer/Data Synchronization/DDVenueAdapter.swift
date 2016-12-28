@@ -10,16 +10,35 @@ import UIKit
 
 import SwiftyJSON
 import PromiseKit
+import MagicalRecord
 
 class DDVenueAdapter: NSObject {
 
     // Fetch venue details
     // * Venue ID
-    class func details(venueID: Int)-> Promise<JSON> {
+    class func details(venue: DDVenue)-> Promise<DDVenueMenu?> {
         
         // Netman
         let netman = DDNetworkingManager.shared
-        return netman.request(.get, path: "restaurant/\(venueID)", version: "v2")
+        return netman.request(.get, path: "restaurant/\(venue.modelID)", version: "v2").then { response-> DDVenueMenu? in
+            
+            do {
+             
+                // Fetch object
+                let menu = try DDVenueMenu.fetchOrInsert(json: response)
+                menu?.venue = venue
+                venue.menu = menu
+                
+                // Save changes
+                try NSManagedObjectContext.mr_rootSaving().save()
+                
+                // Return result
+                return menu
+            }
+            catch {
+                return nil
+            }
+        }
     }
     
     // Fetch venues with location

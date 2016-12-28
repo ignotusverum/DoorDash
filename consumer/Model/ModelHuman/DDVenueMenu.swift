@@ -14,5 +14,20 @@ import PromiseKit
 @objc(DDVenueMenu)
 open class DDVenueMenu: _DDVenueMenu {
 
-	// MARK: - Fetching logic
+    // MARK: - Fetching logic
+    class func fetchObject(objectID: Int, context: NSManagedObjectContext = NSManagedObjectContext.mr_rootSaving()) throws -> DDVenueMenu? {
+        
+        return try DDVenueMenu.modelFetch(objectID: objectID, context:context) as? DDVenueMenu
+    }
+    
+    class func fetchOrInsert(json: JSON, context: NSManagedObjectContext = NSManagedObjectContext.mr_rootSaving()) throws -> DDVenueMenu? {
+        
+        return try DDVenueMenu.modelFetchOrInsert(json:
+            json, context: context) as? DDVenueMenu
+    }
+    
+    override func setValue(json: JSON, context: NSManagedObjectContext) {
+        
+        super.setValue(json: json)
+    }
 }
