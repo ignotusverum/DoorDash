@@ -15,7 +15,19 @@ class DDAppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Test
+        DDVenueAdapter.fetch(lat: 37.42274, lng: -122.139956)
+        
+        // Setup DB
+        self.setupDB()
+        
         return true
+    }
+    
+    func setupDB() {
+        
+        let databaseManager = DDDatabaseManager.shared
+        databaseManager.setupDB()
     }
 }

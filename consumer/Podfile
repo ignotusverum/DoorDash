@@ -17,7 +17,7 @@ pod 'Alamofire', '4.0.0'
 pod 'SwiftyJSON', :git => 'https://github.com/appsailor/SwiftyJSON.git', :branch => 'swift3'
 
 # DB
-pod 'CoreStore', :git => 'git@github.com:JohnEstropia/CoreStore.git', :branch => 'swift3_develop'
+pod 'MagicalRecord'
 
 # swift integration
 use_frameworks!

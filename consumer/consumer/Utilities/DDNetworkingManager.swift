@@ -28,36 +28,38 @@ class DDNetworkingManager: NSObject {
         "Content-Type": "application/json"
     ]
     
-    static let sharedManager = DDNetworkingManager()
+    static let shared = DDNetworkingManager()
     
     let manager = Alamofire.SessionManager.default
     
-    func baseUrl() -> String {
+    func baseUrl(_ version: String) -> String {
         
-        return String(format: "https://%@/%@/", hostName, hostVersion)
+        return String(format: "https://%@/%@/", hostName, version)
     }
     
-    func URLWithPath(path: String)-> URL {
+    func URLWithPath(_ path: String, version: String)-> URL {
         
-        let urlResult = URL(string: self.URLString(path: path))
+        let urlResult = URL(string: self.URLString(path, version: version))
         if let urlResult = urlResult {
             
             return urlResult
         }
         
-        return URL(string: baseUrl())!
+        return URL(string: baseUrl(version))!
     }
     
-    func URLString(path: String)-> String {
+    func URLString(_ path: String, version: String)-> String {
         
-        return String(format: "%@%@", self.baseUrl(), path)
+        return String(format: "%@%@", self.baseUrl(version), path)
     }
     
     // MARK: - HTTP Request + Promise
-    func request(_ method: HTTPMethod, path URLString: String, parameters: [String: Any]? = nil, setHeaders: Bool = true) -> Promise<JSON> {
+    func request(_ method: HTTPMethod, path URLString: String, parameters: [String: Any]? = nil, version: String = hostVersion) -> Promise<JSON> {
+        
+        let path = self.URLString(URLString, version: version)
         
         return Promise { fulfill, reject in
-            self.manager.request(self.URLWithPath(path: URLString), method: method, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
+            self.manager.request(path, method: method, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
                 .validate()
                 .responseJSON { response in
                     
@@ -78,6 +80,7 @@ class DDNetworkingManager: NSObject {
     }
     
     // MARK: - Utilities
+    // Unauthorized response notification
     func postUnauthorizedResponseNotification() {
         
         let nc = NotificationCenter.default

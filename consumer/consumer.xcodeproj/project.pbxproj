@@ -6,14 +6,36 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		F58A56E21E1342BB00D0193C /* mogenerator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F58A56E31E1342BB00D0193C /* Build configuration list for PBXAggregateTarget "mogenerator" */;
+			buildPhases = (
+				F58A56E61E1342C100D0193C /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = mogenerator;
+			productName = mogenerator;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		8280318530FC749E685DB2C6 /* Pods_consumer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47EDCFAB457C2EFD56660035 /* Pods_consumer.framework */; };
 		F58A56C81E133B5C00D0193C /* DDAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A56C71E133B5C00D0193C /* DDAppDelegate.swift */; };
 		F58A56CD1E133B5C00D0193C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58A56CB1E133B5C00D0193C /* Main.storyboard */; };
-		F58A56D01E133B5C00D0193C /* consumer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F58A56CE1E133B5C00D0193C /* consumer.xcdatamodeld */; };
 		F58A56D21E133B5C00D0193C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F58A56D11E133B5C00D0193C /* Assets.xcassets */; };
 		F58A56D51E133B5C00D0193C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58A56D31E133B5C00D0193C /* LaunchScreen.storyboard */; };
 		F58A56DF1E133D9400D0193C /* DDNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A56DE1E133D9400D0193C /* DDNetworkingManager.swift */; };
+		F58A56E11E1340BF00D0193C /* DDVenueAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A56E01E1340BF00D0193C /* DDVenueAdapter.swift */; };
+		F58A56EA1E1342E800D0193C /* DDModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F58A56E81E1342E800D0193C /* DDModel.xcdatamodeld */; };
+		F58A56FF1E1348F600D0193C /* DDVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A56F61E1348F600D0193C /* DDVenue.swift */; };
+		F58A57001E1348F600D0193C /* DDVenueMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A56F71E1348F600D0193C /* DDVenueMenu.swift */; };
+		F58A57031E1348F600D0193C /* _DDVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A56FB1E1348F600D0193C /* _DDVenue.swift */; };
+		F58A57041E1348F600D0193C /* _DDVenueMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A56FC1E1348F600D0193C /* _DDVenueMenu.swift */; };
+		F58A57081E134C5B00D0193C /* DDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A57071E134C5B00D0193C /* DDModel.swift */; };
+		F58A570A1E134C5F00D0193C /* _DDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A57091E134C5F00D0193C /* _DDModel.swift */; };
+		F58A570C1E134D8500D0193C /* DDDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A570B1E134D8500D0193C /* DDDatabaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,11 +45,19 @@
 		F58A56C41E133B5C00D0193C /* consumer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = consumer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58A56C71E133B5C00D0193C /* DDAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDAppDelegate.swift; sourceTree = "<group>"; };
 		F58A56CC1E133B5C00D0193C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F58A56CF1E133B5C00D0193C /* consumer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = consumer.xcdatamodel; sourceTree = "<group>"; };
 		F58A56D11E133B5C00D0193C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F58A56D41E133B5C00D0193C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F58A56D61E133B5C00D0193C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F58A56DE1E133D9400D0193C /* DDNetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDNetworkingManager.swift; sourceTree = "<group>"; };
+		F58A56E01E1340BF00D0193C /* DDVenueAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDVenueAdapter.swift; sourceTree = "<group>"; };
+		F58A56E91E1342E800D0193C /* DDModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DDModel.xcdatamodel; sourceTree = "<group>"; };
+		F58A56F61E1348F600D0193C /* DDVenue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDVenue.swift; sourceTree = "<group>"; };
+		F58A56F71E1348F600D0193C /* DDVenueMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDVenueMenu.swift; sourceTree = "<group>"; };
+		F58A56FB1E1348F600D0193C /* _DDVenue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _DDVenue.swift; sourceTree = "<group>"; };
+		F58A56FC1E1348F600D0193C /* _DDVenueMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _DDVenueMenu.swift; sourceTree = "<group>"; };
+		F58A57071E134C5B00D0193C /* DDModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDModel.swift; sourceTree = "<group>"; };
+		F58A57091E134C5F00D0193C /* _DDModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _DDModel.swift; sourceTree = "<group>"; };
+		F58A570B1E134D8500D0193C /* DDDatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDDatabaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +110,7 @@
 		F58A56C61E133B5C00D0193C /* consumer */ = {
 			isa = PBXGroup;
 			children = (
+				F58A56E71E1342D300D0193C /* Models */,
 				F58A56DD1E133D6600D0193C /* Utilities */,
 				F58A56DC1E133D4200D0193C /* Data Synchronization */,
 				F58A56C71E133B5C00D0193C /* DDAppDelegate.swift */,
@@ -87,7 +118,6 @@
 				F58A56D11E133B5C00D0193C /* Assets.xcassets */,
 				F58A56D31E133B5C00D0193C /* LaunchScreen.storyboard */,
 				F58A56D61E133B5C00D0193C /* Info.plist */,
-				F58A56CE1E133B5C00D0193C /* consumer.xcdatamodeld */,
 			);
 			path = consumer;
 			sourceTree = "<group>";
@@ -95,6 +125,7 @@
 		F58A56DC1E133D4200D0193C /* Data Synchronization */ = {
 			isa = PBXGroup;
 			children = (
+				F58A56E01E1340BF00D0193C /* DDVenueAdapter.swift */,
 			);
 			path = "Data Synchronization";
 			sourceTree = "<group>";
@@ -103,9 +134,42 @@
 			isa = PBXGroup;
 			children = (
 				F58A56DE1E133D9400D0193C /* DDNetworkingManager.swift */,
+				F58A570B1E134D8500D0193C /* DDDatabaseManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
+		};
+		F58A56E71E1342D300D0193C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F58A56F51E1348F600D0193C /* ModelHuman */,
+				F58A56FA1E1348F600D0193C /* ModelMachine */,
+				F58A56E81E1342E800D0193C /* DDModel.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F58A56F51E1348F600D0193C /* ModelHuman */ = {
+			isa = PBXGroup;
+			children = (
+				F58A57071E134C5B00D0193C /* DDModel.swift */,
+				F58A56F61E1348F600D0193C /* DDVenue.swift */,
+				F58A56F71E1348F600D0193C /* DDVenueMenu.swift */,
+			);
+			name = ModelHuman;
+			path = Model/ModelHuman;
+			sourceTree = SOURCE_ROOT;
+		};
+		F58A56FA1E1348F600D0193C /* ModelMachine */ = {
+			isa = PBXGroup;
+			children = (
+				F58A57091E134C5F00D0193C /* _DDModel.swift */,
+				F58A56FB1E1348F600D0193C /* _DDVenue.swift */,
+				F58A56FC1E1348F600D0193C /* _DDVenueMenu.swift */,
+			);
+			name = ModelMachine;
+			path = Model/ModelMachine;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -146,6 +210,11 @@
 						DevelopmentTeam = 9CHSEMW6LK;
 						ProvisioningStyle = Automatic;
 					};
+					F58A56E21E1342BB00D0193C = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9CHSEMW6LK;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = F58A56BF1E133B5C00D0193C /* Build configuration list for PBXProject "consumer" */;
@@ -162,6 +231,7 @@
 			projectRoot = "";
 			targets = (
 				F58A56C31E133B5C00D0193C /* consumer */,
+				F58A56E21E1342BB00D0193C /* mogenerator */,
 			);
 		};
 /* End PBXProject section */
@@ -225,6 +295,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-consumer/Pods-consumer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F58A56E61E1342C100D0193C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mogenerator --template-var arc=true -m consumer/Models/DDModel.xcdatamodeld / -M Model/ModelMachine -H Model/ModelHuman --base-class NSManagedObject --includem Model/ModelIncludes --swift --template-path ModelTemplates";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -232,9 +315,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F58A56E11E1340BF00D0193C /* DDVenueAdapter.swift in Sources */,
+				F58A56EA1E1342E800D0193C /* DDModel.xcdatamodeld in Sources */,
+				F58A56FF1E1348F600D0193C /* DDVenue.swift in Sources */,
+				F58A57041E1348F600D0193C /* _DDVenueMenu.swift in Sources */,
 				F58A56C81E133B5C00D0193C /* DDAppDelegate.swift in Sources */,
-				F58A56D01E133B5C00D0193C /* consumer.xcdatamodeld in Sources */,
+				F58A57001E1348F600D0193C /* DDVenueMenu.swift in Sources */,
+				F58A57081E134C5B00D0193C /* DDModel.swift in Sources */,
+				F58A570A1E134C5F00D0193C /* _DDModel.swift in Sources */,
 				F58A56DF1E133D9400D0193C /* DDNetworkingManager.swift in Sources */,
+				F58A57031E1348F600D0193C /* _DDVenue.swift in Sources */,
+				F58A570C1E134D8500D0193C /* DDDatabaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +472,22 @@
 			};
 			name = Release;
 		};
+		F58A56E41E1342BB00D0193C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 9CHSEMW6LK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F58A56E51E1342BB00D0193C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 9CHSEMW6LK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -402,16 +509,25 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		F58A56E31E1342BB00D0193C /* Build configuration list for PBXAggregateTarget "mogenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F58A56E41E1342BB00D0193C /* Debug */,
+				F58A56E51E1342BB00D0193C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		F58A56CE1E133B5C00D0193C /* consumer.xcdatamodeld */ = {
+		F58A56E81E1342E800D0193C /* DDModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				F58A56CF1E133B5C00D0193C /* consumer.xcdatamodel */,
+				F58A56E91E1342E800D0193C /* DDModel.xcdatamodel */,
 			);
-			currentVersion = F58A56CF1E133B5C00D0193C /* consumer.xcdatamodel */;
-			path = consumer.xcdatamodeld;
+			currentVersion = F58A56E91E1342E800D0193C /* DDModel.xcdatamodel */;
+			path = DDModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
