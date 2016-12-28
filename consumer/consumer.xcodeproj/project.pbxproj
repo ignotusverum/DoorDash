@@ -43,6 +43,7 @@
 		F58A57191E135CEE00D0193C /* Atrian_1.otf in Resources */ = {isa = PBXBuildFile; fileRef = F58A57181E135CEE00D0193C /* Atrian_1.otf */; };
 		F58A571B1E135D1600D0193C /* DDFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A571A1E135D1600D0193C /* DDFont.swift */; };
 		F58A571D1E135E5D00D0193C /* DDColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A571C1E135E5D00D0193C /* DDColor.swift */; };
+		F58A571F1E1362DC00D0193C /* DDFavoriteVenueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A571E1E1362DC00D0193C /* DDFavoriteVenueListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		F58A57181E135CEE00D0193C /* Atrian_1.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Atrian_1.otf; sourceTree = "<group>"; };
 		F58A571A1E135D1600D0193C /* DDFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDFont.swift; sourceTree = "<group>"; };
 		F58A571C1E135E5D00D0193C /* DDColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDColor.swift; sourceTree = "<group>"; };
+		F58A571E1E1362DC00D0193C /* DDFavoriteVenueListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDFavoriteVenueListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				F58A570E1E135B4900D0193C /* DDVenueListViewController.swift */,
+				F58A571E1E1362DC00D0193C /* DDFavoriteVenueListViewController.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				F58A56DF1E133D9400D0193C /* DDNetworkingManager.swift in Sources */,
 				F58A57121E135B7900D0193C /* DDViewController.swift in Sources */,
 				F58A57031E1348F600D0193C /* _DDVenue.swift in Sources */,
+				F58A571F1E1362DC00D0193C /* DDFavoriteVenueListViewController.swift in Sources */,
 				F58A570C1E134D8500D0193C /* DDDatabaseManager.swift in Sources */,
 				F58A571D1E135E5D00D0193C /* DDColor.swift in Sources */,
 			);

@@ -22,13 +22,8 @@ class DDAppDelegate: UIResponder, UIApplicationDelegate {
         // Setup DB
         self.setupDB()
         
-        for family in UIFont.familyNames {
-            print("\(family)")
-            
-            for name in UIFont.fontNames(forFamilyName: family) {
-                print("   \(name)")
-            }
-        }
+        // Setup Tab bar tint
+        UITabBar.appearance().tintColor = UIColor.defaultColor
         
         return true
     }
