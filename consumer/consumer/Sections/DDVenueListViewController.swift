@@ -71,7 +71,26 @@ class DDVenueListViewController: UIViewController {
 extension DDVenueListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath)
+        
+        let venue = self.datasource[indexPath.row]
+        
+        // Fetch venue details
+        DDVenueAdapter.details(venue: venue).then { response-> Void in
+            
+            if let _ = response {
+              
+                
+            }
+            else {
+                
+                // Show error - parsing failure
+                self.showOneButtonAlertController(title: "Whoops", message: "Something went wrong, please try again", cancelButtonText: "Ok")
+            }
+            }.catch { error-> Void in
+                
+                // Networking call failure
+                self.showOneButtonAlertController(title: "Whoops", message: error.localizedDescription, cancelButtonText: "Ok")
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
