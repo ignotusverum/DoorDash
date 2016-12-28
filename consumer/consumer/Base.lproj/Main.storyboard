@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zQn-1o-eSc">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="2bt-hr-S5H"/>
@@ -35,7 +35,7 @@
                             <constraint firstItem="zQn-1o-eSc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="2VM-8m-x0e"/>
                             <constraint firstAttribute="trailing" secondItem="zQn-1o-eSc" secondAttribute="trailing" id="HIb-d2-Rcd"/>
                             <constraint firstItem="zQn-1o-eSc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IQ2-Qw-a36"/>
-                            <constraint firstItem="zQn-1o-eSc" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="ZRK-xv-vJF"/>
+                            <constraint firstItem="zQn-1o-eSc" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="49" id="ZRK-xv-vJF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Aty-5o-WPV">
@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="1768.8" y="-546.47676161919048"/>
         </scene>
-        <!--View Controller-->
+        <!--Venue Details View Controller-->
         <scene sceneID="nbw-JS-VRr">
             <objects>
-                <viewController id="hps-Vb-6gY" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DDVenueDetailsViewController" id="hps-Vb-6gY" customClass="DDVenueDetailsViewController" customModule="consumer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iiL-aq-T47"/>
                         <viewControllerLayoutGuide type="bottom" id="vPE-7e-oc0"/>
@@ -74,6 +74,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SOe-cw-dSS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -130,7 +131,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Anc-Jg-u7U">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Z1o-6y-Smv" id="ANi-BY-Vmg"/>
@@ -140,7 +141,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Anc-Jg-u7U" firstAttribute="bottom" secondItem="ve8-sR-gPA" secondAttribute="top" id="ELr-O0-2Lw"/>
+                            <constraint firstItem="Anc-Jg-u7U" firstAttribute="bottom" secondItem="ve8-sR-gPA" secondAttribute="top" constant="49" id="ELr-O0-2Lw"/>
                             <constraint firstItem="Anc-Jg-u7U" firstAttribute="leading" secondItem="XDS-a2-f2s" secondAttribute="leading" id="LeR-ik-xdl"/>
                             <constraint firstItem="Anc-Jg-u7U" firstAttribute="top" secondItem="eiA-7w-RnK" secondAttribute="bottom" id="l8w-6x-Pu2"/>
                             <constraint firstAttribute="trailing" secondItem="Anc-Jg-u7U" secondAttribute="trailing" id="wcH-I1-afY"/>
