@@ -16,6 +16,7 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (4.1.0):
     - PromiseKit/CorePromise
+  - SwiftLocation (1.1.1)
   - SwiftyJSON (3.0.0)
 
 DEPENDENCIES:
@@ -24,6 +25,7 @@ DEPENDENCIES:
   - Kingfisher
   - MagicalRecord
   - PromiseKit (~> 4.0)
+  - SwiftLocation (>= 1.0.6)
   - SwiftyJSON (from `https://github.com/appsailor/SwiftyJSON.git`, branch `swift3`)
 
 EXTERNAL SOURCES:
@@ -42,8 +44,9 @@ SPEC CHECKSUMS:
   Kingfisher: 8d80f39da403cd9c9ee11984e1655f4d6a566cdb
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   PromiseKit: c98453ff78544c0ad5bb0ea980782e6875f47978
+  SwiftLocation: aac16955b508c46b82bf07fcceb7e2a3b382b8d5
   SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
 
-PODFILE CHECKSUM: 83ceb1226c4cf412cec41967c7ccf8722342dafd
+PODFILE CHECKSUM: 50ee4aed67cd812c7a0599aabe19b381f96c132c
 
 COCOAPODS: 1.1.1

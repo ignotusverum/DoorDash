@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftLocation
 
 class DDVenueListViewController: UIViewController {
 
@@ -24,7 +25,26 @@ class DDVenueListViewController: UIViewController {
         self.setTitle("DoorDash")
         
         // Retreive current location
-        
+        let _ = Location.getLocation(withAccuracy: .block, onSuccess: { location in
+         
+            // Fetch data based on location
+            DDVenueAdapter.fetch(lat: location.coordinate.latitude, lng: location.coordinate.longitude).then { result-> Void in
+                
+                // Update datasource
+                self.datasource = result
+                self.tableView.reloadData()
+                
+                }.catch { error-> Void in
+                    
+                    // Something went wrong - show error
+                    self.showOneButtonAlertController(title: "Whoops", message: error.localizedDescription, cancelButtonText: "Ok")
+            }
+            
+        }) { (location, error) in
+            
+            // Location retreiveing went wrong - show error
+            self.showOneButtonAlertController(title: "Whoops", message: error.localizedDescription, cancelButtonText: "Ok")
+        }
     }
     
     // MARK: - Actions

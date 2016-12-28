@@ -46,7 +46,6 @@
 		F58A571F1E1362DC00D0193C /* DDFavoriteVenueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A571E1E1362DC00D0193C /* DDFavoriteVenueListViewController.swift */; };
 		F58A57231E13641400D0193C /* DDVenueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A57211E13641400D0193C /* DDVenueTableViewCell.swift */; };
 		F58A57241E13641400D0193C /* DDVenueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F58A57221E13641400D0193C /* DDVenueTableViewCell.xib */; };
-		F58A57301E13938900D0193C /* DDLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A572F1E13938900D0193C /* DDLocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,7 +57,7 @@
 		F58A56CC1E133B5C00D0193C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F58A56D11E133B5C00D0193C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F58A56D41E133B5C00D0193C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F58A56D61E133B5C00D0193C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F58A56D61E133B5C00D0193C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		F58A56DE1E133D9400D0193C /* DDNetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDNetworkingManager.swift; sourceTree = "<group>"; };
 		F58A56E01E1340BF00D0193C /* DDVenueAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDVenueAdapter.swift; sourceTree = "<group>"; };
 		F58A56E91E1342E800D0193C /* DDModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DDModel.xcdatamodel; sourceTree = "<group>"; };
@@ -79,7 +78,6 @@
 		F58A571E1E1362DC00D0193C /* DDFavoriteVenueListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDFavoriteVenueListViewController.swift; sourceTree = "<group>"; };
 		F58A57211E13641400D0193C /* DDVenueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDVenueTableViewCell.swift; sourceTree = "<group>"; };
 		F58A57221E13641400D0193C /* DDVenueTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDVenueTableViewCell.xib; sourceTree = "<group>"; };
-		F58A572F1E13938900D0193C /* DDLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDLocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +140,6 @@
 				F58A56CB1E133B5C00D0193C /* Main.storyboard */,
 				F58A56D11E133B5C00D0193C /* Assets.xcassets */,
 				F58A56D31E133B5C00D0193C /* LaunchScreen.storyboard */,
-				F58A56D61E133B5C00D0193C /* Info.plist */,
 			);
 			path = consumer;
 			sourceTree = "<group>";
@@ -161,7 +158,6 @@
 				F58A57101E135B6700D0193C /* Extensions */,
 				F58A56DE1E133D9400D0193C /* DDNetworkingManager.swift */,
 				F58A570B1E134D8500D0193C /* DDDatabaseManager.swift */,
-				F58A572F1E13938900D0193C /* DDLocationManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -221,6 +217,7 @@
 		F58A57151E135CD300D0193C /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				F58A56D61E133B5C00D0193C /* Info.plist */,
 				F58A57181E135CEE00D0193C /* Atrian_1.otf */,
 				F58A57161E135CEA00D0193C /* Atrian_3.otf */,
 			);
@@ -389,7 +386,6 @@
 				F58A56FF1E1348F600D0193C /* DDVenue.swift in Sources */,
 				F58A57041E1348F600D0193C /* _DDVenueMenu.swift in Sources */,
 				F58A571B1E135D1600D0193C /* DDFont.swift in Sources */,
-				F58A57301E13938900D0193C /* DDLocationManager.swift in Sources */,
 				F58A570F1E135B4900D0193C /* DDVenueListViewController.swift in Sources */,
 				F58A56C81E133B5C00D0193C /* DDAppDelegate.swift in Sources */,
 				F58A57001E1348F600D0193C /* DDVenueMenu.swift in Sources */,

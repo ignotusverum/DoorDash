@@ -13,6 +13,9 @@ pod 'EZSwiftExtensions'
 # Networking
 pod 'Alamofire', '4.0.0'
 
+# Location
+pod 'SwiftLocation', '>= 1.0.6'
+
 # Asynch image
 pod 'Kingfisher'
 
