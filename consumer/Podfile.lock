@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.0.0)
   - EZSwiftExtensions (1.8)
+  - Kingfisher (3.2.4)
   - MagicalRecord (2.3.2):
     - MagicalRecord/Core (= 2.3.2)
   - MagicalRecord/Core (2.3.2)
@@ -20,6 +21,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (= 4.0.0)
   - EZSwiftExtensions
+  - Kingfisher
   - MagicalRecord
   - PromiseKit (~> 4.0)
   - SwiftyJSON (from `https://github.com/appsailor/SwiftyJSON.git`, branch `swift3`)
@@ -37,10 +39,11 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
   EZSwiftExtensions: b58e0fe7702e30c4f01bd039658fe84b4fdf5bd5
+  Kingfisher: 8d80f39da403cd9c9ee11984e1655f4d6a566cdb
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   PromiseKit: c98453ff78544c0ad5bb0ea980782e6875f47978
   SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
 
-PODFILE CHECKSUM: 0ef6186155c21a4dd8e561cae8642d7b5abbc530
+PODFILE CHECKSUM: 83ceb1226c4cf412cec41967c7ccf8722342dafd
 
 COCOAPODS: 1.1.1

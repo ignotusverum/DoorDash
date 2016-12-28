@@ -27,6 +27,16 @@ open class DDVenue: _DDVenue {
         return Double(deliveryFeeCent) / 100.0
     }
     
+    // Image URL
+    var imageURL: URL? {
+        
+        // Safety check
+        guard let imageString = self.urlString else { return nil }
+        
+        // Creating URL
+        return URL(string: imageString)
+    }
+    
 	// MARK: - Fetching logic
     class func fetchObject(objectID: Int, context: NSManagedObjectContext = NSManagedObjectContext.mr_rootSaving()) throws -> DDVenue? {
         

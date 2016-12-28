@@ -10,6 +10,9 @@ import UIKit
 
 class DDVenueListViewController: UIViewController {
 
+    // MARK: - Outlets
+    @IBOutlet weak var tableView: UITableView!
+    
     // Datasource
     var datasource = [DDVenue]()
     
@@ -19,6 +22,9 @@ class DDVenueListViewController: UIViewController {
         
         // Set title
         self.setTitle("DoorDash")
+        
+        // Retreive current location
+        
     }
     
     // MARK: - Actions
@@ -37,6 +43,10 @@ extension DDVenueListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath)
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80.0
+    }
 }
 
 // MARK: - Table view datasource
@@ -51,6 +61,16 @@ extension DDVenueListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        var cell = tableView.dequeueReusableCell(withIdentifier: "VenueCell")
+
+        if cell == nil {
+            
+            let venue = self.datasource[indexPath.row]
+            
+            cell = DDVenueTableViewCell(venue: venue, reuseIdentifier: "VenueCell")
+        }
+        
+        return cell!
     }
 }

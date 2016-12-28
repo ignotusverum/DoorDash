@@ -13,6 +13,9 @@ pod 'EZSwiftExtensions'
 # Networking
 pod 'Alamofire', '4.0.0'
 
+# Asynch image
+pod 'Kingfisher'
+
 # JSON
 pod 'SwiftyJSON', :git => 'https://github.com/appsailor/SwiftyJSON.git', :branch => 'swift3'
 
