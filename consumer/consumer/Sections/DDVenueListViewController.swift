@@ -24,6 +24,9 @@ class DDVenueListViewController: UIViewController {
         // Set title
         self.setTitle("DoorDash")
         
+        // Load cell nib
+        self.cellSetup()
+        
         // Retreive current location
         let _ = Location.getLocation(withAccuracy: .block, onSuccess: { location in
          
@@ -45,6 +48,13 @@ class DDVenueListViewController: UIViewController {
             // Location retreiveing went wrong - show error
             self.showOneButtonAlertController(title: "Whoops", message: error.localizedDescription, cancelButtonText: "Ok")
         }
+    }
+    
+    // MARK: - Cell Loading
+    func cellSetup() {
+        
+        let cellNib = UINib(nibName: "DDVenueTableViewCell", bundle: nil)
+        self.tableView.register(cellNib, forCellReuseIdentifier: "DDVenueTableViewCell")
     }
     
     // MARK: - Actions
@@ -82,14 +92,13 @@ extension DDVenueListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell = tableView.dequeueReusableCell(withIdentifier: "VenueCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DDVenueTableViewCell", for: indexPath) as? DDVenueTableViewCell
 
-        if cell == nil {
-            
-            let venue = self.datasource[indexPath.row]
-            
-            cell = DDVenueTableViewCell(venue: venue, reuseIdentifier: "VenueCell")
-        }
+        let venue = self.datasource[indexPath.row]
+        
+        print(venue)
+        
+        cell!.venue = venue
         
         return cell!
     }

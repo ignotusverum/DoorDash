@@ -12,10 +12,12 @@ import Kingfisher
 class DDVenueTableViewCell: UITableViewCell {
 
     // Venue Object
-    var venue: DDVenue {
+    var venue: DDVenue? {
         didSet {
             
             // Set UI for venue object
+            // Safety check
+            guard let venue = venue else { return }
             
             // Name label
             if let name = venue.name {
@@ -63,14 +65,13 @@ class DDVenueTableViewCell: UITableViewCell {
     // Delivery time Label
     @IBOutlet weak var timeLabel: UILabel!
     
-    init(venue: DDVenue, reuseIdentifier: String?) {
+    override func prepareForReuse() {
+        super.prepareForReuse()
         
-        self.venue = venue
-        
-        super.init(style: .default, reuseIdentifier: reuseIdentifier)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        self.priceLabel.text = ""
+        self.timeLabel.text = ""
+        self.categoryLabel.text = ""
+        self.nameLabel.text = ""
+        self.venueImageView.image = nil
     }
 }
