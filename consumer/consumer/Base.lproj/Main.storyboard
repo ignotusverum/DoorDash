@@ -24,6 +24,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zQn-1o-eSc">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="2bt-hr-S5H"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zrg-NO-wBA"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -37,9 +41,15 @@
                     <navigationItem key="navigationItem" id="Aty-5o-WPV">
                         <barButtonItem key="leftBarButtonItem" image="nav-address" id="KWd-Yj-u87">
                             <color key="tintColor" red="0.9882352941176471" green="0.25882352941176467" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="mapActionpPressed:" destination="BYZ-38-t0r" id="82L-nA-hrM"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="nav-search" id="kth-HL-hLU">
                             <color key="tintColor" red="0.98823529409999999" green="0.25882352939999997" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="searchButtonPressed:" destination="BYZ-38-t0r" id="IKz-b1-qgX"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -100,6 +110,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Anc-Jg-u7U">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Z1o-6y-Smv" id="ANi-BY-Vmg"/>
+                                    <outlet property="delegate" destination="Z1o-6y-Smv" id="PdS-M5-969"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -113,9 +127,15 @@
                     <navigationItem key="navigationItem" id="HGg-Mb-R5I">
                         <barButtonItem key="leftBarButtonItem" image="nav-address" id="m1b-Wy-cBQ">
                             <color key="tintColor" red="0.98823529409999999" green="0.25882352939999997" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="mapActionpPressed:" destination="Z1o-6y-Smv" id="YRb-JH-TM8"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="nav-search" id="eEd-Re-Rfe">
                             <color key="tintColor" red="0.98823529409999999" green="0.25882352939999997" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="searchButtonPressed:" destination="Z1o-6y-Smv" id="Zcn-Ss-P6y"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
