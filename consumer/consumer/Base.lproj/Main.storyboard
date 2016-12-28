@@ -20,7 +20,19 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zQn-1o-eSc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zQn-1o-eSc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="2VM-8m-x0e"/>
+                            <constraint firstAttribute="trailing" secondItem="zQn-1o-eSc" secondAttribute="trailing" id="HIb-d2-Rcd"/>
+                            <constraint firstItem="zQn-1o-eSc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IQ2-Qw-a36"/>
+                            <constraint firstItem="zQn-1o-eSc" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="ZRK-xv-vJF"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Aty-5o-WPV">
                         <barButtonItem key="leftBarButtonItem" image="nav-address" id="KWd-Yj-u87">
@@ -84,7 +96,19 @@
                     <view key="view" contentMode="scaleToFill" id="XDS-a2-f2s">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Anc-Jg-u7U">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Anc-Jg-u7U" firstAttribute="bottom" secondItem="ve8-sR-gPA" secondAttribute="top" id="ELr-O0-2Lw"/>
+                            <constraint firstItem="Anc-Jg-u7U" firstAttribute="leading" secondItem="XDS-a2-f2s" secondAttribute="leading" id="LeR-ik-xdl"/>
+                            <constraint firstItem="Anc-Jg-u7U" firstAttribute="top" secondItem="eiA-7w-RnK" secondAttribute="bottom" id="l8w-6x-Pu2"/>
+                            <constraint firstAttribute="trailing" secondItem="Anc-Jg-u7U" secondAttribute="trailing" id="wcH-I1-afY"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HGg-Mb-R5I">
                         <barButtonItem key="leftBarButtonItem" image="nav-address" id="m1b-Wy-cBQ">
@@ -97,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mh-ps-bnQ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1769" y="115"/>
+            <point key="canvasLocation" x="1768.8" y="114.69265367316342"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="hla-sK-khT">
