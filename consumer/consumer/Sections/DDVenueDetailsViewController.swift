@@ -36,6 +36,13 @@ class DDVenueDetailsViewController: UIViewController {
         self.tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
     
+    // MARK: - Cells setup
+    func cellsSetup() {
+        
+        let headerCellNib = UINib(nibName: "DDVenueDetailsHeaderTableViewCell", bundle: nil)
+        tableView.register(headerCellNib, forCellReuseIdentifier: "DDVenueDetailsHeaderTableViewCell")
+    }
+    
     // MARK: - UI Setup
     func setupUI(_ venue: DDVenue) {
         
@@ -61,6 +68,17 @@ extension DDVenueDetailsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        // Header cell. setup
+        if indexPath.section == 0 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DDVenueDetailsHeaderTableViewCell", for: indexPath) as! DDVenueDetailsHeaderTableViewCell
+            cell.venue = venue
+            
+            return cell
+        }
+        
+        
         return UITableViewCell()
     }
 }
