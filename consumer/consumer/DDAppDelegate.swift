@@ -19,7 +19,7 @@ class DDAppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // Mask type
-        SVProgressHUD.setDefaultMaskType(.Black)
+        SVProgressHUD.setDefaultMaskType(.black)
         
         // Setup DB
         self.setupDB()
