@@ -50,9 +50,9 @@ open class DDVenueCategory: _DDVenueCategory {
             self.statusString = statusString
         }
         
-        if let openHoursArray = json["open_hours"].array {
-            
-            // Set open hours array
-        }
+//        if let openHoursArray = json["open_hours"].array {
+//            
+//            // Set open hours array
+//        }
     }
 }

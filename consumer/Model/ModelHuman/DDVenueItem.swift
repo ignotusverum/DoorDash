@@ -29,5 +29,25 @@ open class DDVenueItem: _DDVenueItem {
     override func setValue(json: JSON, context: NSManagedObjectContext) {
         
         super.setValue(json: json)
+        
+        if let priceCent = json["price"].int {
+            
+            self.priceCent = priceCent
+        }
+        
+        if let sortingNumber = json["menu_item_number"].int {
+            
+            self.sortingNumber = sortingNumber
+        }
+        
+        if let itemDescription = json["description"].string {
+            
+            self.itemDescription = itemDescription
+        }
+        
+        if let name = json["name"].string {
+            
+            self.name = name
+        }
     }
 }
