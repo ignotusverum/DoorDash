@@ -7,6 +7,9 @@ def pods
 swift_version = "3.0"
 pod 'PromiseKit', '~> 4.0'
 
+# Loading
+pod 'SVProgressHUD'
+
 # Extensionsb
 pod 'EZSwiftExtensions'
 

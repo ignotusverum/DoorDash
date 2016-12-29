@@ -16,6 +16,7 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (4.1.0):
     - PromiseKit/CorePromise
+  - SVProgressHUD (2.1.2)
   - SwiftLocation (1.1.1)
   - SwiftyJSON (3.0.0)
 
@@ -25,6 +26,7 @@ DEPENDENCIES:
   - Kingfisher
   - MagicalRecord
   - PromiseKit (~> 4.0)
+  - SVProgressHUD
   - SwiftLocation (>= 1.0.6)
   - SwiftyJSON (from `https://github.com/appsailor/SwiftyJSON.git`, branch `swift3`)
 
@@ -44,9 +46,10 @@ SPEC CHECKSUMS:
   Kingfisher: 8d80f39da403cd9c9ee11984e1655f4d6a566cdb
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   PromiseKit: c98453ff78544c0ad5bb0ea980782e6875f47978
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   SwiftLocation: aac16955b508c46b82bf07fcceb7e2a3b382b8d5
   SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
 
-PODFILE CHECKSUM: 50ee4aed67cd812c7a0599aabe19b381f96c132c
+PODFILE CHECKSUM: 4e364864d2a3d9cb6ae63406b63950828b1c9f7e
 
 COCOAPODS: 1.1.1

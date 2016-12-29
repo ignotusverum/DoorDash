@@ -57,12 +57,14 @@ class DDVenueDetailsHeaderTableViewCell: UITableViewCell {
         if favorite {
         
             self.favoriteButton.setTitle("Favorited", for: .normal)
+            self.favoriteButton.setTitleColor(UIColor.white, for: .normal)
             self.favoriteButton.setBackgroundColor(UIColor.defaultColor, forState: .normal)
             
             return
         }
         
         self.favoriteButton.setTitle("Add to Favorites", for: .normal)
+        self.favoriteButton.setTitleColor(UIColor.defaultColor, for: .normal)
         self.favoriteButton.setBackgroundColor(UIColor.clear, forState: .normal)
     }
     

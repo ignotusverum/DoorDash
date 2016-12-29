@@ -23,6 +23,9 @@ class DDVenueDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Cells setup
+        self.cellsSetup()
+        
         // Safety check
         guard let venue = venue else {
             self.popVC()

@@ -92,6 +92,7 @@
 		F58A574E1E149F2A00D0193C /* _DDVenueItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _DDVenueItem.swift; sourceTree = "<group>"; };
 		F58A57591E149F6F00D0193C /* _DDCategoryMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _DDCategoryMenu.swift; sourceTree = "<group>"; };
 		F58A575B1E149F7300D0193C /* DDCategoryMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDCategoryMenu.swift; sourceTree = "<group>"; };
+		F58A575D1E14A9BB00D0193C /* consumer-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "consumer-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +145,7 @@
 		F58A56C61E133B5C00D0193C /* consumer */ = {
 			isa = PBXGroup;
 			children = (
+				F58A575D1E14A9BB00D0193C /* consumer-Bridging-Header.h */,
 				F58A57201E1363FD00D0193C /* UI Components */,
 				F58A57151E135CD300D0193C /* Supporting files */,
 				F58A570D1E135B2A00D0193C /* Sections */,
@@ -553,6 +555,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DD.consumer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "consumer/consumer-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -568,6 +571,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DD.consumer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "consumer/consumer-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
