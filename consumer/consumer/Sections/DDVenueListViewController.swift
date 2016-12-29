@@ -80,7 +80,6 @@ class DDVenueListViewController: UIViewController {
             self.navigationItem.titleView = searchBar
             
             searchBar.becomeFirstResponder()
-            
             // Add cancel search button
             
             return
@@ -88,6 +87,9 @@ class DDVenueListViewController: UIViewController {
         
         // Return title
         self.setTitle("Door Dash")
+        
+        self.datasource = self.resultDatasource
+        self.tableView.reloadData()
     }
     
     // MARK: - Cell Loading
