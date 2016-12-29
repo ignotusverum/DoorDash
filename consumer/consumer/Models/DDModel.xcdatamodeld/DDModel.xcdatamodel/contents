@@ -16,12 +16,17 @@
     </entity>
     <entity name="DDVenueMenu" representedClassName="DDVenueMenu" parentEntity="DDModel" syncable="YES">
         <attribute name="categories" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="menuDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="minAge" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="priceCent" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="priceWithoutInflation" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sortingNumber" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="venue" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DDVenue" inverseName="menu" inverseEntity="DDVenue" syncable="YES"/>
     </entity>
     <elements>
         <element name="DDVenue" positionX="-63" positionY="-18" width="128" height="180"/>
-        <element name="DDVenueMenu" positionX="-54" positionY="36" width="128" height="90"/>
+        <element name="DDVenueMenu" positionX="-54" positionY="36" width="128" height="165"/>
         <element name="DDModel" positionX="-36" positionY="45" width="128" height="60"/>
     </elements>
 </model>

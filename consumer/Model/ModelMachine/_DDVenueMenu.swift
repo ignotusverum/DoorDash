@@ -6,7 +6,12 @@ import CoreData
 
 public enum DDVenueMenuAttributes: String {
     case categories = "categories"
+    case menuDescription = "menuDescription"
+    case minAge = "minAge"
     case name = "name"
+    case priceCent = "priceCent"
+    case priceWithoutInflation = "priceWithoutInflation"
+    case sortingNumber = "sortingNumber"
 }
 
 public enum DDVenueMenuRelationships: String {
@@ -51,7 +56,22 @@ open class _DDVenueMenu: DDModel {
     var categories: AnyObject?
 
     @NSManaged open
+    var menuDescription: String?
+
+    @NSManaged open
+    var minAge: Int
+
+    @NSManaged open
     var name: String?
+
+    @NSManaged open
+    var priceCent: Int
+
+    @NSManaged open
+    var priceWithoutInflation: Int
+
+    @NSManaged open
+    var sortingNumber: Int
 
     // MARK: - Relationships
 

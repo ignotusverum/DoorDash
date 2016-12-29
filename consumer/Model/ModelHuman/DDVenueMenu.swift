@@ -30,6 +30,34 @@ open class DDVenueMenu: _DDVenueMenu {
         
         super.setValue(json: json)
         
+        // Min age
+        if let minAge = json["min_age_requirement"].int {
+            
+            self.minAge = minAge
+        }
         
+        // Price in cents
+        if let priceCent = json["price"].int {
+            
+            self.priceCent = priceCent
+        }
+        
+        // Sorting
+        if let sortingNumber = json["menu_item_number"].int {
+            
+            self.sortingNumber = sortingNumber
+        }
+        
+        // Desctiption
+        if let menuDescription = json["description"].string {
+            
+            self.menuDescription = menuDescription
+        }
+        
+        // Name
+        if let name = json["name"].string {
+            
+            self.name = name
+        }
     }
 }
