@@ -19,6 +19,9 @@ class DDMapSelectionViewController: UIViewController {
     // label
     @IBOutlet weak var addressLabel: UILabel!
     
+    // Confirm button closure
+    var confirmClosure: ((_ result: CLLocationCoordinate2D) -> ())?
+    
     // MARK: - Controller lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +46,18 @@ class DDMapSelectionViewController: UIViewController {
         
         centerPin.coordinate = mapView.centerCoordinate
         mapView.addAnnotation(centerPin)
+    }
+    
+    func confirmPressed(completion: ((_ result: CLLocationCoordinate2D) -> ())?) {
+        
+        self.confirmClosure = completion
+    }
+    
+    // MARK: - Actions
+    @IBAction func confirmButtonPressed(_ sender: UIButton) {
+        
+        self.confirmClosure?(centerPin.coordinate)
+        self.dismissVC(completion: nil)
     }
 }
 
@@ -76,9 +91,6 @@ extension DDMapSelectionViewController : MKMapViewDelegate {
             // Place details
             var placeMark: CLPlacemark!
             placeMark = placemarks?[0]
-            
-            // Address dictionary
-            print(placeMark.addressDictionary)
             
             // Street address
             if let street = placeMark.addressDictionary!["Thoroughfare"] as? String {

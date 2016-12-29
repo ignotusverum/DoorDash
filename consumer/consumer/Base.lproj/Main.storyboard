@@ -48,7 +48,6 @@
                             <color key="tintColor" red="0.9882352941176471" green="0.25882352941176467" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="mapActionpPressed:" destination="BYZ-38-t0r" id="82L-nA-hrM"/>
-                                <segue destination="5Uk-Et-SL6" kind="presentation" id="HIR-m6-vPM"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="nav-search" id="kth-HL-hLU">
@@ -70,7 +69,7 @@
         <!--Map Selection View Controller-->
         <scene sceneID="sFQ-ix-eqq">
             <objects>
-                <viewController id="JXs-I9-nZb" customClass="DDMapSelectionViewController" customModule="consumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DDMapSelectionViewController" id="JXs-I9-nZb" customClass="DDMapSelectionViewController" customModule="consumer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sWZ-ab-Hdh"/>
                         <viewControllerLayoutGuide type="bottom" id="JMM-0R-slN"/>
@@ -250,7 +249,6 @@
                             <color key="tintColor" red="0.98823529409999999" green="0.25882352939999997" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="mapActionpPressed:" destination="Z1o-6y-Smv" id="YRb-JH-TM8"/>
-                                <segue destination="5Uk-Et-SL6" kind="presentation" id="Ozu-4p-NBy"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="nav-search" id="eEd-Re-Rfe">
@@ -315,7 +313,6 @@
         <image name="tab-favorites" width="28" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Rzz-oW-xhi"/>
-        <segue reference="Ozu-4p-NBy"/>
+        <segue reference="pdU-W4-AgN"/>
     </inferredMetricsTieBreakers>
 </document>

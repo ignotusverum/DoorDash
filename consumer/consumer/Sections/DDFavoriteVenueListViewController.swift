@@ -46,4 +46,6 @@ class DDFavoriteVenueListViewController: DDVenueListViewController {
         
         self.tableView.reloadData()
     }
+    
+    @IBAction override func mapActionpPressed(_ sender: UIButton) { }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 import SwiftLocation
 import SVProgressHUD
 
@@ -36,25 +37,7 @@ class DDVenueListViewController: UIViewController {
         // Retreive current location
         let _ = Location.getLocation(withAccuracy: .block, onSuccess: { location in
          
-            // Fetch data based on location
-            DDVenueAdapter.fetch(lat: location.coordinate.latitude, lng: location.coordinate.longitude).then { result-> Void in
-                
-                // Update datasource + sort
-                self.datasource = result.sorted {
-                    
-                    guard let name0 = $0.name, let name1 = $1.name else { return false }
-                    return name0 < name1
-                }
-                
-                self.resultDatasource = self.datasource
-                
-                self.tableView.reloadData()
-                
-                }.catch { error-> Void in
-                    
-                    // Something went wrong - show error
-                    self.showOneButtonAlertController(title: "Whoops", message: error.localizedDescription, cancelButtonText: "Ok")
-            }
+            self.fetchVenuesWith(coordinate: location.coordinate)
             
         }) { (location, error) in
             
@@ -102,11 +85,43 @@ class DDVenueListViewController: UIViewController {
     // MARK: - Actions
     @IBAction func mapActionpPressed(_ sender: UIButton) {
         
+        let sb = self.storyboard
+        let mapVC = sb?.instantiateViewController(withIdentifier: "DDMapSelectionViewController") as! DDMapSelectionViewController
+        
+        mapVC.confirmPressed { coordinate in
+            
+            self.fetchVenuesWith(coordinate: coordinate)
+        }
     }
     
     @IBAction func searchButtonPressed(_ sender: UIButton) {
         
         self.searchBar(show: !searchActive)
+    }
+    
+    // MARK: - Utilities
+    func fetchVenuesWith(coordinate: CLLocationCoordinate2D) {
+        
+        // Fetch data based on location
+        DDVenueAdapter.fetch(lat: coordinate.latitude, lng: coordinate.longitude).then { result-> Void in
+            
+            // Update datasource + sort
+            self.datasource = result.sorted {
+                
+                guard let name0 = $0.name, let name1 = $1.name else { return false }
+                return name0 < name1
+            }
+            
+            self.resultDatasource = self.datasource
+            
+            self.tableView.reloadData()
+            
+            }.catch { error-> Void in
+                
+                // Something went wrong - show error
+                self.showOneButtonAlertController(title: "Whoops", message: error.localizedDescription, cancelButtonText: "Ok")
+        }
+
     }
 }
 
