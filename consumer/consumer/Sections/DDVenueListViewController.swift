@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftLocation
+import SVProgressHUD
 
 class DDVenueListViewController: UIViewController {
 
@@ -77,8 +78,14 @@ extension DDVenueListViewController: UITableViewDelegate {
         
         let venue = self.datasource[indexPath.row]
         
+        // Show progress
+        SVProgressHUD.show()
+        
         // Fetch venue details
         DDVenueAdapter.details(venue: venue).then { response-> Void in
+            
+            // Hide
+            SVProgressHUD.dismiss()
             
             if let _ = response {
               
