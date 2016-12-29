@@ -17,7 +17,7 @@ open class DDModel: _DDModel {
 
     var json: JSON?
     
-    class func modelFetch(objectID: Int, context: NSManagedObjectContext = NSManagedObjectContext.mr_default()) throws -> Any? {
+    class func modelFetch(objectID: Int, context: NSManagedObjectContext = NSManagedObjectContext.mr_rootSaving()) throws -> Any? {
         
         var result: Any?
         
@@ -32,7 +32,7 @@ open class DDModel: _DDModel {
         return result
     }
     
-    class func modelFetchOrInsert(json: JSON, context: NSManagedObjectContext = NSManagedObjectContext.mr_default()) throws -> Any? {
+    class func modelFetchOrInsert(json: JSON, context: NSManagedObjectContext = NSManagedObjectContext.mr_rootSaving()) throws -> Any? {
         
         var result: Any?
         
@@ -52,7 +52,7 @@ open class DDModel: _DDModel {
         return result
     }
     
-    func setValue(json: JSON, context: NSManagedObjectContext = NSManagedObjectContext.mr_default()) {
+    func setValue(json: JSON, context: NSManagedObjectContext = NSManagedObjectContext.mr_rootSaving()) {
         
         if self.json != json {
             self.json = json

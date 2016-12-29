@@ -7,9 +7,31 @@
 //
 
 import UIKit
+import CoreData
 
 class DDFavoriteVenueListViewController: DDVenueListViewController {
 
+    // MARK: - Contoller lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Setup fethed result controller
+        self.createFetchController()
+    }
     
-
+    // MARK: - Fetch controller
+    func createFetchController() {
+        
+        // Warning - this only works localy
+        // There's no provided enpoint patching venue with 
+        // Changed favorites value
+        let favoritesPreticate = NSPredicate(format: "\(DDVenueAttributes.favorite.rawValue) = YES")
+        
+        let fetchResult = DDVenue.mr_requestAll(with: favoritesPreticate, in: NSManagedObjectContext.mr_rootSaving())
+        fetchResult.sortDescriptors = [NSSortDescriptor(key: DDVenueAttributes.name.rawValue, ascending: true)]
+        
+        self.datasource = DDVenue.mr_executeFetchRequest(fetchResult, in: NSManagedObjectContext.mr_rootSaving()) as! [DDVenue]
+        
+        self.tableView.reloadData()
+    }
 }

@@ -38,10 +38,13 @@ class DDVenueDetailsViewController: UIViewController {
         self.cellsSetup()
         
         // Safety check
-        guard let venue = venue else {
+        guard let venueName = venue?.name else {
             self.popVC()
             return
         }
+        
+        // Controller title
+        self.setTitle(venueName, color: UIColor.black)
         
         // Disable empty dividers
         self.tableView?.tableFooterView = UIView(frame: CGRect.zero)

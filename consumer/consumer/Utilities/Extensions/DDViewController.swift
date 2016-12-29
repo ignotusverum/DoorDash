@@ -16,7 +16,7 @@ extension UIViewController {
         
         let label = UILabel()
         
-        label.attributedText = titleText.navTitle()
+        label.attributedText = titleText.navTitle(color: color)
         
         label.sizeToFit()
         
