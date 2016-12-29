@@ -22,6 +22,8 @@
 
 /* Begin PBXBuildFile section */
 		8280318530FC749E685DB2C6 /* Pods_consumer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47EDCFAB457C2EFD56660035 /* Pods_consumer.framework */; };
+		F567217C1E14AC200054AD71 /* DDMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567217A1E14AC200054AD71 /* DDMenuTableViewCell.swift */; };
+		F567217D1E14AC200054AD71 /* DDMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F567217B1E14AC200054AD71 /* DDMenuTableViewCell.xib */; };
 		F58A56C81E133B5C00D0193C /* DDAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A56C71E133B5C00D0193C /* DDAppDelegate.swift */; };
 		F58A56CD1E133B5C00D0193C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58A56CB1E133B5C00D0193C /* Main.storyboard */; };
 		F58A56D21E133B5C00D0193C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F58A56D11E133B5C00D0193C /* Assets.xcassets */; };
@@ -59,6 +61,8 @@
 		156CF20AD6556D11BA1FDD5F /* Pods-consumer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-consumer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-consumer/Pods-consumer.debug.xcconfig"; sourceTree = "<group>"; };
 		47EDCFAB457C2EFD56660035 /* Pods_consumer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_consumer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C13718A24DA5000312F3B8D /* Pods-consumer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-consumer.release.xcconfig"; path = "Pods/Target Support Files/Pods-consumer/Pods-consumer.release.xcconfig"; sourceTree = "<group>"; };
+		F567217A1E14AC200054AD71 /* DDMenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDMenuTableViewCell.swift; sourceTree = "<group>"; };
+		F567217B1E14AC200054AD71 /* DDMenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDMenuTableViewCell.xib; sourceTree = "<group>"; };
 		F58A56C41E133B5C00D0193C /* consumer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = consumer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58A56C71E133B5C00D0193C /* DDAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDAppDelegate.swift; sourceTree = "<group>"; };
 		F58A56CC1E133B5C00D0193C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -226,6 +230,8 @@
 				F58A57221E13641400D0193C /* DDVenueTableViewCell.xib */,
 				F58A57331E1498E600D0193C /* DDVenueDetailsHeaderTableViewCell.swift */,
 				F58A57341E1498E600D0193C /* DDVenueDetailsHeaderTableViewCell.xib */,
+				F567217A1E14AC200054AD71 /* DDMenuTableViewCell.swift */,
+				F567217B1E14AC200054AD71 /* DDMenuTableViewCell.xib */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -326,6 +332,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F567217D1E14AC200054AD71 /* DDMenuTableViewCell.xib in Resources */,
 				F58A56D51E133B5C00D0193C /* LaunchScreen.storyboard in Resources */,
 				F58A57171E135CEA00D0193C /* Atrian_3.otf in Resources */,
 				F58A56D21E133B5C00D0193C /* Assets.xcassets in Resources */,
@@ -415,6 +422,7 @@
 				F58A57351E1498E600D0193C /* DDVenueDetailsHeaderTableViewCell.swift in Sources */,
 				F58A56C81E133B5C00D0193C /* DDAppDelegate.swift in Sources */,
 				F58A57321E1410DE00D0193C /* DDVenueDetailsViewController.swift in Sources */,
+				F567217C1E14AC200054AD71 /* DDMenuTableViewCell.swift in Sources */,
 				F58A56DF1E133D9400D0193C /* DDNetworkingManager.swift in Sources */,
 				F58A57561E149F2A00D0193C /* _DDVenue.swift in Sources */,
 				F58A57121E135B7900D0193C /* DDViewController.swift in Sources */,

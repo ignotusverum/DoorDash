@@ -54,8 +54,6 @@ class DDVenueDetailsViewController: UIViewController {
         
         // Menus objects
         self.menusDatasource = menu.menus.allObjects as! [DDCategoryMenu]
-        
-        print(self.menusDatasource)
     }
 }
 
@@ -81,8 +79,13 @@ extension DDVenueDetailsViewController: UITableViewDataSource {
             return cell
         }
         
+        // Menu cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! DDMenuTableViewCell
         
-        return UITableViewCell()
+        let menu = self.menusDatasource[indexPath.row]
+        cell.menu = menu
+        
+        return cell
     }
 }
 
