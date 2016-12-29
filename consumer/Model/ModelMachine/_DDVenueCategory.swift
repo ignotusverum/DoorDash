@@ -11,7 +11,7 @@ public enum DDVenueCategoryAttributes: String {
 }
 
 public enum DDVenueCategoryRelationships: String {
-    case items = "items"
+    case menus = "menus"
     case venue = "venue"
 }
 
@@ -61,10 +61,10 @@ open class _DDVenueCategory: DDModel {
     // MARK: - Relationships
 
     @NSManaged open
-    var items: NSSet
+    var menus: NSSet
 
-    open func itemsSet() -> NSMutableSet {
-        return self.items.mutableCopy() as! NSMutableSet
+    open func menusSet() -> NSMutableSet {
+        return self.menus.mutableCopy() as! NSMutableSet
     }
 
     @NSManaged open
@@ -74,28 +74,28 @@ open class _DDVenueCategory: DDModel {
 
 extension _DDVenueCategory {
 
-    open func addItems(_ objects: NSSet) {
-        let mutable = self.items.mutableCopy() as! NSMutableSet
+    open func addMenus(_ objects: NSSet) {
+        let mutable = self.menus.mutableCopy() as! NSMutableSet
         mutable.union(objects as Set<NSObject>)
-        self.items = mutable.copy() as! NSSet
+        self.menus = mutable.copy() as! NSSet
     }
 
-    open func removeItems(_ objects: NSSet) {
-        let mutable = self.items.mutableCopy() as! NSMutableSet
+    open func removeMenus(_ objects: NSSet) {
+        let mutable = self.menus.mutableCopy() as! NSMutableSet
         mutable.minus(objects as Set<NSObject>)
-        self.items = mutable.copy() as! NSSet
+        self.menus = mutable.copy() as! NSSet
     }
 
-    open func addItemsObject(_ value: DDVenueItem) {
-        let mutable = self.items.mutableCopy() as! NSMutableSet
+    open func addMenusObject(_ value: DDCategoryMenu) {
+        let mutable = self.menus.mutableCopy() as! NSMutableSet
         mutable.add(value)
-        self.items = mutable.copy() as! NSSet
+        self.menus = mutable.copy() as! NSSet
     }
 
-    open func removeItemsObject(_ value: DDVenueItem) {
-        let mutable = self.items.mutableCopy() as! NSMutableSet
+    open func removeMenusObject(_ value: DDCategoryMenu) {
+        let mutable = self.menus.mutableCopy() as! NSMutableSet
         mutable.remove(value)
-        self.items = mutable.copy() as! NSSet
+        self.menus = mutable.copy() as! NSSet
     }
 
 }

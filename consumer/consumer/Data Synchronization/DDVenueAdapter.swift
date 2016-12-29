@@ -24,6 +24,16 @@ class DDVenueAdapter: NSObject {
             
             do {
                 
+                // Getting category arraay
+                if let categoriesArray = response.array {
+                    
+                    // Enumerating
+                    for categoryJSON in categoriesArray {
+                     
+                        
+                    }
+                }
+                
                 // Fetch object
 //                let menu = try DDVenueMenu.fetchOrInsert(json: response)
 //                menu?.venue = venue

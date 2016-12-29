@@ -63,7 +63,7 @@ open class _DDVenue: DDModel {
     var deliveryFeeCent: Int
 
     @NSManaged open
-    var favorite: Bool
+    var favorite: Int
 
     @NSManaged open
     var name: String?

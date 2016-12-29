@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16C67" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DDCategoryMenu" representedClassName="DDCategoryMenu" syncable="YES" codeGenerationType="class">
+        <attribute name="sortID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="subtitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DDVenueCategory" inverseName="menus" inverseEntity="DDVenueCategory" syncable="YES"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DDVenueItem" inverseName="menu" inverseEntity="DDVenueItem" syncable="YES"/>
+    </entity>
     <entity name="DDModel" representedClassName="DDModel" syncable="YES">
         <attribute name="modelID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
@@ -18,7 +25,7 @@
         <attribute name="sortID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="subtitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DDVenueItem" inverseName="category" inverseEntity="DDVenueItem" syncable="YES"/>
+        <relationship name="menus" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DDCategoryMenu" inverseName="category" inverseEntity="DDCategoryMenu" syncable="YES"/>
         <relationship name="venue" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DDVenue" inverseName="menu" inverseEntity="DDVenue" syncable="YES"/>
     </entity>
     <entity name="DDVenueItem" representedClassName="DDVenueItem" syncable="YES">
@@ -28,12 +35,13 @@
         <attribute name="priceCent" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="priceWithoutInflation" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="sortingNumber" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DDVenueCategory" inverseName="items" inverseEntity="DDVenueCategory" syncable="YES"/>
+        <relationship name="menu" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DDCategoryMenu" inverseName="items" inverseEntity="DDCategoryMenu" syncable="YES"/>
     </entity>
     <elements>
         <element name="DDVenue" positionX="-63" positionY="-18" width="128" height="180"/>
         <element name="DDVenueCategory" positionX="-54" positionY="36" width="128" height="120"/>
         <element name="DDModel" positionX="-36" positionY="45" width="128" height="60"/>
         <element name="DDVenueItem" positionX="-27" positionY="108" width="128" height="150"/>
+        <element name="DDCategoryMenu" positionX="-18" positionY="144" width="128" height="120"/>
     </elements>
 </model>

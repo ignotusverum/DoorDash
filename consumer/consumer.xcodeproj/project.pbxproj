@@ -53,6 +53,8 @@
 		F58A573A1E149B5400D0193C /* DDVenueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A57381E149B5400D0193C /* DDVenueItem.swift */; };
 		F58A573D1E149B5A00D0193C /* _DDVenueCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A573B1E149B5A00D0193C /* _DDVenueCategory.swift */; };
 		F58A573E1E149B5A00D0193C /* _DDVenueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A573C1E149B5A00D0193C /* _DDVenueItem.swift */; };
+		F58A57401E149E4000D0193C /* DDCategoryMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A573F1E149E4000D0193C /* DDCategoryMenu.swift */; };
+		F58A57421E149E4900D0193C /* _DDCategoryMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A57411E149E4900D0193C /* _DDCategoryMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +94,8 @@
 		F58A57381E149B5400D0193C /* DDVenueItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDVenueItem.swift; sourceTree = "<group>"; };
 		F58A573B1E149B5A00D0193C /* _DDVenueCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _DDVenueCategory.swift; sourceTree = "<group>"; };
 		F58A573C1E149B5A00D0193C /* _DDVenueItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _DDVenueItem.swift; sourceTree = "<group>"; };
+		F58A573F1E149E4000D0193C /* DDCategoryMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDCategoryMenu.swift; sourceTree = "<group>"; };
+		F58A57411E149E4900D0193C /* _DDCategoryMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _DDCategoryMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +193,7 @@
 		F58A56F51E1348F600D0193C /* ModelHuman */ = {
 			isa = PBXGroup;
 			children = (
+				F58A573F1E149E4000D0193C /* DDCategoryMenu.swift */,
 				F58A57371E149B5400D0193C /* DDVenueCategory.swift */,
 				F58A57381E149B5400D0193C /* DDVenueItem.swift */,
 				F58A57071E134C5B00D0193C /* DDModel.swift */,
@@ -202,6 +207,7 @@
 		F58A56FA1E1348F600D0193C /* ModelMachine */ = {
 			isa = PBXGroup;
 			children = (
+				F58A57411E149E4900D0193C /* _DDCategoryMenu.swift */,
 				F58A573B1E149B5A00D0193C /* _DDVenueCategory.swift */,
 				F58A573C1E149B5A00D0193C /* _DDVenueItem.swift */,
 				F58A57091E134C5F00D0193C /* _DDModel.swift */,
@@ -424,8 +430,10 @@
 				F58A57031E1348F600D0193C /* _DDVenue.swift in Sources */,
 				F58A571F1E1362DC00D0193C /* DDFavoriteVenueListViewController.swift in Sources */,
 				F58A57231E13641400D0193C /* DDVenueTableViewCell.swift in Sources */,
+				F58A57421E149E4900D0193C /* _DDCategoryMenu.swift in Sources */,
 				F58A570C1E134D8500D0193C /* DDDatabaseManager.swift in Sources */,
 				F58A571D1E135E5D00D0193C /* DDColor.swift in Sources */,
+				F58A57401E149E4000D0193C /* DDCategoryMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

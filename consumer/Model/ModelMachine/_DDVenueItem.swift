@@ -14,7 +14,7 @@ public enum DDVenueItemAttributes: String {
 }
 
 public enum DDVenueItemRelationships: String {
-    case category = "category"
+    case menu = "menu"
 }
 
 open class _DDVenueItem: NSManagedObject {
@@ -72,7 +72,7 @@ open class _DDVenueItem: NSManagedObject {
     // MARK: - Relationships
 
     @NSManaged open
-    var category: DDVenueCategory?
+    var menu: DDCategoryMenu?
 
 }
 
