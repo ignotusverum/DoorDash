@@ -17,10 +17,11 @@ class DDVenueListViewController: UIViewController {
     
     // Datasource
     var datasource = [DDVenue]()
+    var resultDatasource = [DDVenue]()
     
     // Search bar
     lazy var searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, w: 0.0, h: 20))
-    var searchBarIsPresented = false
+    var searchActive = false
     
     // MARK: - Controller lifecycle
     override func viewDidLoad() {
@@ -44,6 +45,9 @@ class DDVenueListViewController: UIViewController {
                     guard let name0 = $0.name, let name1 = $1.name else { return false }
                     return name0 < name1
                 }
+                
+                self.resultDatasource = self.datasource
+                
                 self.tableView.reloadData()
                 
                 }.catch { error-> Void in
@@ -65,14 +69,19 @@ class DDVenueListViewController: UIViewController {
     // MARK: - Search bar
     func searchBar(show: Bool) {
         
-        self.searchBarIsPresented = show
+        self.searchActive = show
         
         if show {
-            self.searchBar = UISearchBar(frame: CGRect(x: 40.0, y: 0.0, w: self.view.frame.width - 40.0, h: 20.0))
+            searchBar = UISearchBar(frame: CGRect(x: 40.0, y: 0.0, w: self.view.frame.width - 40.0, h: 20.0))
+            searchBar.delegate = self
             
             searchBar.placeholder = "Search"
             
             self.navigationItem.titleView = searchBar
+            
+            searchBar.becomeFirstResponder()
+            
+            // Add cancel search button
             
             return
         }
@@ -95,7 +104,7 @@ class DDVenueListViewController: UIViewController {
     
     @IBAction func searchButtonPressed(_ sender: UIButton) {
         
-        self.searchBar(show: !searchBarIsPresented)
+        self.searchBar(show: !searchActive)
     }
 }
 
@@ -163,5 +172,51 @@ extension DDVenueListViewController: UITableViewDataSource {
         cell!.venue = venue
         
         return cell!
+    }
+}
+
+// MARK: - Seach bar delegate
+extension DDVenueListViewController: UISearchBarDelegate {
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {}
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) { }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        
+        self.searchBar.text = ""
+        searchBar.resignFirstResponder()
+        
+        self.datasource = self.resultDatasource
+        self.tableView.reloadData()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        self.performSearchWith(text: searchBar.text)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if searchText.length == 0 {
+            
+            self.datasource = self.resultDatasource
+            self.tableView.reloadData()
+        }
+        else {
+            
+            self.performSearchWith(text: searchText)
+        }
+    }
+    
+    func performSearchWith(text: String?) {
+
+        self.datasource = self.resultDatasource.filter {
+            
+            guard let name = $0.name, let text = text else { return false }
+            return name.contains(text)
+        }
+        
+        self.tableView.reloadData()
     }
 }

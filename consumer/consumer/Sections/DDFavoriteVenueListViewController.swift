@@ -42,6 +42,7 @@ class DDFavoriteVenueListViewController: DDVenueListViewController {
         fetchResult.sortDescriptors = [NSSortDescriptor(key: DDVenueAttributes.name.rawValue, ascending: true)]
         
         self.datasource = DDVenue.mr_executeFetchRequest(fetchResult, in: NSManagedObjectContext.mr_rootSaving()) as! [DDVenue]
+        self.resultDatasource = self.datasource
         
         self.tableView.reloadData()
     }
