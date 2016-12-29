@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MagicalRecord
 
 class DDVenueDetailsHeaderTableViewCell: UITableViewCell {
 
@@ -16,6 +17,9 @@ class DDVenueDetailsHeaderTableViewCell: UITableViewCell {
             
             // Safety check
             guard let venue = venue else { return }
+            
+            // Setup favorite button
+            updateFavoriteButton(venue.favorite)
             
             // Async image load
             if let imageURL = venue.imageURL {
@@ -39,8 +43,44 @@ class DDVenueDetailsHeaderTableViewCell: UITableViewCell {
     // Fav Button
     @IBOutlet weak var favoriteButton: UIButton!
     
+    // Favorite button closure
+    var favoriteClosure: ((_ result: Bool) -> ())?
+    
+    // Favorite
+    func favoritePressed(completion: ((_ result: Bool) -> ())?) {
+        
+        self.favoriteClosure = completion
+    }
+    
+    func updateFavoriteButton(_ favorite: Bool) {
+        
+        if favorite {
+        
+            self.favoriteButton.setTitle("Favorited", for: .normal)
+            self.favoriteButton.setBackgroundColor(UIColor.defaultColor, forState: .normal)
+            
+            return
+        }
+        
+        self.favoriteButton.setTitle("Add to Favorites", for: .normal)
+        self.favoriteButton.setBackgroundColor(UIColor.clear, forState: .normal)
+    }
+    
     // MARK: - Action
     @IBAction func favoriteButtonPressed(_ sender: UIButton) {
         
+        // Safety check
+        guard let venue = venue else { return }
+        
+        venue.favorite = !venue.favorite
+        
+        updateFavoriteButton(venue.favorite)
+        
+        do {
+            try NSManagedObjectContext.mr_rootSaving().save()
+        } catch { }
+        
+        // Pass closure
+        self.favoriteClosure?(venue.favorite)
     }
 }

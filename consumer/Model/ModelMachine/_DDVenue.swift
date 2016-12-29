@@ -63,7 +63,7 @@ open class _DDVenue: DDModel {
     var deliveryFeeCent: Int
 
     @NSManaged open
-    var favorite: Int
+    var favorite: Bool
 
     @NSManaged open
     var name: String?
@@ -80,7 +80,7 @@ open class _DDVenue: DDModel {
     // MARK: - Relationships
 
     @NSManaged open
-    var menu: DDVenueMenu?
+    var menu: DDVenueCategory?
 
 }
 

@@ -25,15 +25,15 @@ class DDVenueAdapter: NSObject {
             do {
                 
                 // Fetch object
-                let menu = try DDVenueMenu.fetchOrInsert(json: response)
-                menu?.venue = venue
-                venue.menu = menu
+//                let menu = try DDVenueMenu.fetchOrInsert(json: response)
+//                menu?.venue = venue
+//                venue.menu = menu
                 
                 // Save changes
                 try NSManagedObjectContext.mr_rootSaving().save()
                 
                 // Return result
-                return menu
+                return nil
             }
             catch {
                 return nil

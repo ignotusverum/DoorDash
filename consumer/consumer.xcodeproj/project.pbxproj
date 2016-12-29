@@ -49,6 +49,10 @@
 		F58A57321E1410DE00D0193C /* DDVenueDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A57311E1410DE00D0193C /* DDVenueDetailsViewController.swift */; };
 		F58A57351E1498E600D0193C /* DDVenueDetailsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A57331E1498E600D0193C /* DDVenueDetailsHeaderTableViewCell.swift */; };
 		F58A57361E1498E600D0193C /* DDVenueDetailsHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F58A57341E1498E600D0193C /* DDVenueDetailsHeaderTableViewCell.xib */; };
+		F58A57391E149B5400D0193C /* DDVenueCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A57371E149B5400D0193C /* DDVenueCategory.swift */; };
+		F58A573A1E149B5400D0193C /* DDVenueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A57381E149B5400D0193C /* DDVenueItem.swift */; };
+		F58A573D1E149B5A00D0193C /* _DDVenueCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A573B1E149B5A00D0193C /* _DDVenueCategory.swift */; };
+		F58A573E1E149B5A00D0193C /* _DDVenueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A573C1E149B5A00D0193C /* _DDVenueItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +88,10 @@
 		F58A57311E1410DE00D0193C /* DDVenueDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDVenueDetailsViewController.swift; sourceTree = "<group>"; };
 		F58A57331E1498E600D0193C /* DDVenueDetailsHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDVenueDetailsHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		F58A57341E1498E600D0193C /* DDVenueDetailsHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDVenueDetailsHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		F58A57371E149B5400D0193C /* DDVenueCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDVenueCategory.swift; sourceTree = "<group>"; };
+		F58A57381E149B5400D0193C /* DDVenueItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDVenueItem.swift; sourceTree = "<group>"; };
+		F58A573B1E149B5A00D0193C /* _DDVenueCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _DDVenueCategory.swift; sourceTree = "<group>"; };
+		F58A573C1E149B5A00D0193C /* _DDVenueItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _DDVenueItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +189,8 @@
 		F58A56F51E1348F600D0193C /* ModelHuman */ = {
 			isa = PBXGroup;
 			children = (
+				F58A57371E149B5400D0193C /* DDVenueCategory.swift */,
+				F58A57381E149B5400D0193C /* DDVenueItem.swift */,
 				F58A57071E134C5B00D0193C /* DDModel.swift */,
 				F58A56F61E1348F600D0193C /* DDVenue.swift */,
 				F58A56F71E1348F600D0193C /* DDVenueMenu.swift */,
@@ -192,6 +202,8 @@
 		F58A56FA1E1348F600D0193C /* ModelMachine */ = {
 			isa = PBXGroup;
 			children = (
+				F58A573B1E149B5A00D0193C /* _DDVenueCategory.swift */,
+				F58A573C1E149B5A00D0193C /* _DDVenueItem.swift */,
 				F58A57091E134C5F00D0193C /* _DDModel.swift */,
 				F58A56FB1E1348F600D0193C /* _DDVenue.swift */,
 				F58A56FC1E1348F600D0193C /* _DDVenueMenu.swift */,
@@ -390,10 +402,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F58A57391E149B5400D0193C /* DDVenueCategory.swift in Sources */,
 				F58A56E11E1340BF00D0193C /* DDVenueAdapter.swift in Sources */,
+				F58A573A1E149B5400D0193C /* DDVenueItem.swift in Sources */,
 				F58A56EA1E1342E800D0193C /* DDModel.xcdatamodeld in Sources */,
 				F58A57141E135BDF00D0193C /* DDString.swift in Sources */,
 				F58A56FF1E1348F600D0193C /* DDVenue.swift in Sources */,
+				F58A573E1E149B5A00D0193C /* _DDVenueItem.swift in Sources */,
 				F58A57041E1348F600D0193C /* _DDVenueMenu.swift in Sources */,
 				F58A571B1E135D1600D0193C /* DDFont.swift in Sources */,
 				F58A570F1E135B4900D0193C /* DDVenueListViewController.swift in Sources */,
@@ -405,6 +420,7 @@
 				F58A57321E1410DE00D0193C /* DDVenueDetailsViewController.swift in Sources */,
 				F58A56DF1E133D9400D0193C /* DDNetworkingManager.swift in Sources */,
 				F58A57121E135B7900D0193C /* DDViewController.swift in Sources */,
+				F58A573D1E149B5A00D0193C /* _DDVenueCategory.swift in Sources */,
 				F58A57031E1348F600D0193C /* _DDVenue.swift in Sources */,
 				F58A571F1E1362DC00D0193C /* DDFavoriteVenueListViewController.swift in Sources */,
 				F58A57231E13641400D0193C /* DDVenueTableViewCell.swift in Sources */,
