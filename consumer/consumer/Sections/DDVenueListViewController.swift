@@ -79,7 +79,12 @@ extension DDVenueListViewController: UITableViewDelegate {
             
             if let _ = response {
               
+                // Setup venue details controller
+                let sb = self.storyboard
+                let venueDetailsVC = sb?.instantiateViewController(withIdentifier: "DDVenueDetailsViewController") as! DDVenueDetailsViewController
+                venueDetailsVC.venue = venue
                 
+                self.pushVC(venueDetailsVC)
             }
             else {
                 
