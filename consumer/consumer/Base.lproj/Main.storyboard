@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -72,13 +73,64 @@
                     <view key="view" contentMode="scaleToFill" id="OGb-cY-N9o">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HoZ-WZ-geb">
+                                <rect key="frame" x="112" y="30" width="150" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="V8O-Ie-sWN"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTd-5c-SYU">
+                                <rect key="frame" x="112" y="131" width="150" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wI2-Wf-7hN">
+                                <rect key="frame" x="75" y="187" width="225" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="EvT-by-8Pp"/>
+                                </constraints>
+                                <state key="normal" title="Add to Favorites">
+                                    <color key="titleColor" red="0.98823529409999999" green="0.25882352939999997" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="favoriteButtonPressed:" destination="hps-Vb-6gY" eventType="touchUpInside" id="LlA-HS-Szx"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8aU-ut-09b">
+                                <rect key="frame" x="0.0" y="252" width="375" height="351"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8aU-ut-09b" secondAttribute="trailing" id="6DQ-UJ-taN"/>
+                            <constraint firstItem="wI2-Wf-7hN" firstAttribute="centerX" secondItem="8aU-ut-09b" secondAttribute="centerX" id="Ikr-UP-DML"/>
+                            <constraint firstAttribute="bottom" secondItem="8aU-ut-09b" secondAttribute="bottom" id="Jgf-oh-xdC"/>
+                            <constraint firstItem="HoZ-WZ-geb" firstAttribute="trailing" secondItem="qTd-5c-SYU" secondAttribute="trailing" id="V1S-us-6Ic"/>
+                            <constraint firstItem="8aU-ut-09b" firstAttribute="top" secondItem="wI2-Wf-7hN" secondAttribute="bottom" constant="20" id="YcN-Ds-vfT"/>
+                            <constraint firstItem="HoZ-WZ-geb" firstAttribute="top" secondItem="iiL-aq-T47" secondAttribute="bottom" constant="30" id="feK-eM-xV7"/>
+                            <constraint firstItem="wI2-Wf-7hN" firstAttribute="leading" secondItem="OGb-cY-N9o" secondAttribute="leadingMargin" constant="59" id="r2v-9M-GtR"/>
+                            <constraint firstItem="HoZ-WZ-geb" firstAttribute="leading" secondItem="OGb-cY-N9o" secondAttribute="leadingMargin" constant="96" id="rky-S1-k52"/>
+                            <constraint firstItem="8aU-ut-09b" firstAttribute="leading" secondItem="OGb-cY-N9o" secondAttribute="leading" id="spi-M6-gRV"/>
+                            <constraint firstItem="qTd-5c-SYU" firstAttribute="top" secondItem="HoZ-WZ-geb" secondAttribute="bottom" constant="21" id="v9t-IJ-Vav"/>
+                            <constraint firstItem="qTd-5c-SYU" firstAttribute="centerX" secondItem="wI2-Wf-7hN" secondAttribute="centerX" id="x5H-WL-QeH"/>
+                            <constraint firstItem="HoZ-WZ-geb" firstAttribute="leading" secondItem="qTd-5c-SYU" secondAttribute="leading" id="xSD-py-lZ6"/>
+                            <constraint firstItem="wI2-Wf-7hN" firstAttribute="top" secondItem="qTd-5c-SYU" secondAttribute="bottom" constant="35" id="ytD-LW-XW8"/>
+                        </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="favoriteButton" destination="wI2-Wf-7hN" id="OAf-nn-9Rl"/>
+                        <outlet property="imageView" destination="HoZ-WZ-geb" id="2RX-Ca-WGR"/>
+                        <outlet property="tableView" destination="8aU-ut-09b" id="EXG-tP-Dyj"/>
+                        <outlet property="timeLabel" destination="qTd-5c-SYU" id="9P7-bB-7KB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SOe-cw-dSS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2618" y="-181"/>
+            <point key="canvasLocation" x="2616.8000000000002" y="-181.25937031484258"/>
         </scene>
         <!--Explore-->
         <scene sceneID="oxu-M4-LoG">
