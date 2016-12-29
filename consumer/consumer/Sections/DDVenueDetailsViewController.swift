@@ -11,13 +11,24 @@ import UIKit
 class DDVenueDetailsViewController: UIViewController {
 
     // Venue
-    var venue: DDVenue?
+    var venue: DDVenue? {
+        didSet {
+            
+            self.tableView?.reloadData()
+            
+            // Safety check
+            guard let category = venue?.category else { return }
+            
+            // Menus objects
+            self.menusDatasource = category.menus.allObjects as! [DDCategoryMenu]
+        }
+    }
     
     // Menu datasource
     var menusDatasource = [DDCategoryMenu]()
     
     // Table View
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView?
     
     // MARK: - Controller lifecycle
     override func viewDidLoad() {
@@ -32,11 +43,8 @@ class DDVenueDetailsViewController: UIViewController {
             return
         }
         
-        // Setup UI based on venue info
-        self.setupUI(venue)
-        
         // Disable empty dividers
-        self.tableView.tableFooterView = UIView(frame: CGRect.zero)
+        self.tableView?.tableFooterView = UIView(frame: CGRect.zero)
     }
     
     // MARK: - Cells setup
@@ -45,18 +53,8 @@ class DDVenueDetailsViewController: UIViewController {
         let headerCellNib = UINib(nibName: "DDVenueDetailsHeaderTableViewCell", bundle: nil)
         let menuCellNib = UINib(nibName: "DDMenuTableViewCell", bundle: nil)
         
-        tableView.register(headerCellNib, forCellReuseIdentifier: "DDVenueDetailsHeaderTableViewCell")
-        tableView.register(menuCellNib, forCellReuseIdentifier: "DDMenuTableViewCell")
-    }
-    
-    // MARK: - UI Setup
-    func setupUI(_ venue: DDVenue) {
-        
-        // Safety check
-        guard let menu = venue.category else { return }
-        
-        // Menus objects
-        self.menusDatasource = menu.menus.allObjects as! [DDCategoryMenu]
+        tableView?.register(headerCellNib, forCellReuseIdentifier: "DDVenueDetailsHeaderTableViewCell")
+        tableView?.register(menuCellNib, forCellReuseIdentifier: "DDMenuTableViewCell")
     }
 }
 

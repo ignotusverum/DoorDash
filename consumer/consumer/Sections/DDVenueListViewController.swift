@@ -81,6 +81,13 @@ extension DDVenueListViewController: UITableViewDelegate {
         // Show progress
         SVProgressHUD.show()
         
+        // Setup venue details controller
+        let sb = self.storyboard
+        let venueDetailsVC = sb?.instantiateViewController(withIdentifier: "DDVenueDetailsViewController") as! DDVenueDetailsViewController
+        venueDetailsVC.venue = venue
+        
+        self.pushVC(venueDetailsVC)
+        
         // Fetch venue details
         DDVenueAdapter.details(venue: venue).then { response-> Void in
             
@@ -88,13 +95,8 @@ extension DDVenueListViewController: UITableViewDelegate {
             SVProgressHUD.dismiss()
             
             if let _ = response {
-              
-                // Setup venue details controller
-                let sb = self.storyboard
-                let venueDetailsVC = sb?.instantiateViewController(withIdentifier: "DDVenueDetailsViewController") as! DDVenueDetailsViewController
-                venueDetailsVC.venue = venue
                 
-                self.pushVC(venueDetailsVC)
+                venueDetailsVC.venue = venue
             }
             else {
                 
