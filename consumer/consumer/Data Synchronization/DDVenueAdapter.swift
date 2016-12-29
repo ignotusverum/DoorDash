@@ -15,10 +15,15 @@ import MagicalRecord
 class DDVenueAdapter: NSObject {
 
     // Fetch venue details
-    // * Venue ID
+    // * Venue Object
+    // Getting full venue object
+    // Includes :
+    // * Category
+    // * Menus
+    // * Items
     class func details(venue: DDVenue)-> Promise<DDVenue?> {
         
-        // Netman
+        // Netman call
         let netman = DDNetworkingManager.shared
         return netman.request(.get, path: "restaurant/\(venue.modelID)/menu", version: "v2").then { response-> DDVenue? in
             
@@ -85,8 +90,10 @@ class DDVenueAdapter: NSObject {
     // lat / lng
     class func fetch(lat: Double, lng: Double)-> Promise<[DDVenue]> {
         
-        // Does not accept params - returns 400
+        // Does not accept params - returns 400 ¯\_(ツ)_/¯
         let netman = DDNetworkingManager.shared
+        
+        // Netman call
         return netman.request(.get, path: "store_search/?lat=\(lat)&lng=\(lng)").then { response-> [DDVenue] in
             
             // Result array
