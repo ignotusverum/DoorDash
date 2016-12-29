@@ -12,8 +12,8 @@ import CoreData
 class DDFavoriteVenueListViewController: DDVenueListViewController {
 
     // MARK: - Contoller lifecycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         // Setup fethed result controller
         self.createFetchController()

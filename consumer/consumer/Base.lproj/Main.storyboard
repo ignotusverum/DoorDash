@@ -105,7 +105,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e4J-NY-7xO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Explore" image="tab-explore" id="nlx-se-vDl"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="dL7-Ke-Vzs">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="dL7-Ke-Vzs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.98823529409999999" green="0.25882352939999997" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
@@ -125,6 +125,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="wUl-9v-GTp" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="nQ8-RB-rmg">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -199,6 +200,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="azF-AW-a0K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.98823529409999999" green="0.25882352939999997" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
