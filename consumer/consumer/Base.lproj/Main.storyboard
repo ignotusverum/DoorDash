@@ -293,9 +293,9 @@
         <!--Navigation Controller-->
         <scene sceneID="q3e-dB-tJK">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Uk-Et-SL6" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="DDMapSelectionNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="5Uk-Et-SL6" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="XB6-2t-tbd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="XB6-2t-tbd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
