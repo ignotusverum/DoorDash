@@ -60,9 +60,9 @@ open class DDVenue: _DDVenue {
         }
         
         // Category
-        if let category = json["featured_category_description"].string {
+        if let categoryTitle = json["featured_category_description"].string {
             
-            self.category = category
+            self.categoryTitle = categoryTitle
         }
         
         // Delivery Fee - cent

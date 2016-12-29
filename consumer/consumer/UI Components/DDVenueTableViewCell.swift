@@ -28,9 +28,9 @@ class DDVenueTableViewCell: UITableViewCell {
             }
             
             // Category label
-            if let category = venue.category {
+            if let categoryTitle = venue.categoryTitle {
                 
-                self.categoryLabel.text = category
+                self.categoryLabel.text = categoryTitle
             }
             
             // Async image load

@@ -34,7 +34,7 @@ class DDVenueDetailsViewController: UIViewController {
     func setupUI(_ venue: DDVenue) {
         
         // Safety check
-        guard let menu = venue.menu else { return }
+        guard let menu = venue.category else { return }
         
         print(menu)
     }

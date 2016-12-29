@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16C67" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="DDCategoryMenu" representedClassName="DDCategoryMenu" syncable="YES" codeGenerationType="class">
+    <entity name="DDCategoryMenu" representedClassName="DDCategoryMenu" parentEntity="DDModel" syncable="YES">
+        <attribute name="hours" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="minOrder" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="sortID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="subtitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timesOpen" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DDVenueCategory" inverseName="menus" inverseEntity="DDVenueCategory" syncable="YES"/>
         <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DDVenueItem" inverseName="menu" inverseEntity="DDVenueItem" syncable="YES"/>
@@ -12,21 +15,25 @@
     </entity>
     <entity name="DDVenue" representedClassName="DDVenue" parentEntity="DDModel" syncable="YES">
         <attribute name="asapTimeMin" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="deliveryFeeCent" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="favorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tags" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="urlString" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="venueDescription" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="menu" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DDVenueCategory" inverseName="venue" inverseEntity="DDVenueCategory" syncable="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DDVenueCategory" inverseName="venue" inverseEntity="DDVenueCategory" syncable="YES"/>
     </entity>
     <entity name="DDVenueCategory" representedClassName="DDVenueCategory" parentEntity="DDModel" syncable="YES">
+        <attribute name="headerImageString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isCathering" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="openHours" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="sortID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="statusString" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subtitle" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="menus" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DDCategoryMenu" inverseName="category" inverseEntity="DDCategoryMenu" syncable="YES"/>
-        <relationship name="venue" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DDVenue" inverseName="menu" inverseEntity="DDVenue" syncable="YES"/>
+        <relationship name="venue" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DDVenue" inverseName="category" inverseEntity="DDVenue" syncable="YES"/>
     </entity>
     <entity name="DDVenueItem" representedClassName="DDVenueItem" syncable="YES">
         <attribute name="itemDescription" optional="YES" attributeType="String" syncable="YES"/>
@@ -39,9 +46,9 @@
     </entity>
     <elements>
         <element name="DDVenue" positionX="-63" positionY="-18" width="128" height="180"/>
-        <element name="DDVenueCategory" positionX="-54" positionY="36" width="128" height="120"/>
         <element name="DDModel" positionX="-36" positionY="45" width="128" height="60"/>
         <element name="DDVenueItem" positionX="-27" positionY="108" width="128" height="150"/>
-        <element name="DDCategoryMenu" positionX="-18" positionY="144" width="128" height="120"/>
+        <element name="DDVenueCategory" positionX="9" positionY="135" width="128" height="180"/>
+        <element name="DDCategoryMenu" positionX="27" positionY="135" width="128" height="165"/>
     </elements>
 </model>

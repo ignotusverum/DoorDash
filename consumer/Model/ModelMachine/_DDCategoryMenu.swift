@@ -5,8 +5,11 @@ import Foundation
 import CoreData
 
 public enum DDCategoryMenuAttributes: String {
+    case hours = "hours"
+    case minOrder = "minOrder"
     case sortID = "sortID"
     case subtitle = "subtitle"
+    case timesOpen = "timesOpen"
     case title = "title"
 }
 
@@ -15,15 +18,15 @@ public enum DDCategoryMenuRelationships: String {
     case items = "items"
 }
 
-open class _DDCategoryMenu: NSManagedObject {
+open class _DDCategoryMenu: DDModel {
 
     // MARK: - Class methods
 
-    open class func entityName () -> String {
+    override open class func entityName () -> String {
         return "DDCategoryMenu"
     }
 
-    open class func entity(managedObjectContext: NSManagedObjectContext) -> NSEntityDescription? {
+    override open class func entity(managedObjectContext: NSManagedObjectContext) -> NSEntityDescription? {
         return NSEntityDescription.entity(forEntityName: self.entityName(), in: managedObjectContext)
     }
 
@@ -50,10 +53,19 @@ open class _DDCategoryMenu: NSManagedObject {
     // MARK: - Properties
 
     @NSManaged open
+    var hours: Int
+
+    @NSManaged open
+    var minOrder: Int
+
+    @NSManaged open
     var sortID: Int
 
     @NSManaged open
     var subtitle: String?
+
+    @NSManaged open
+    var timesOpen: AnyObject?
 
     @NSManaged open
     var title: String?

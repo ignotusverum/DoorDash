@@ -6,7 +6,7 @@ import CoreData
 
 public enum DDVenueAttributes: String {
     case asapTimeMin = "asapTimeMin"
-    case category = "category"
+    case categoryTitle = "categoryTitle"
     case deliveryFeeCent = "deliveryFeeCent"
     case favorite = "favorite"
     case name = "name"
@@ -16,7 +16,7 @@ public enum DDVenueAttributes: String {
 }
 
 public enum DDVenueRelationships: String {
-    case menu = "menu"
+    case category = "category"
 }
 
 open class _DDVenue: DDModel {
@@ -57,13 +57,13 @@ open class _DDVenue: DDModel {
     var asapTimeMin: Int
 
     @NSManaged open
-    var category: String?
+    var categoryTitle: String?
 
     @NSManaged open
     var deliveryFeeCent: Int
 
     @NSManaged open
-    var favorite: Int
+    var favorite: Bool
 
     @NSManaged open
     var name: String?
@@ -80,7 +80,7 @@ open class _DDVenue: DDModel {
     // MARK: - Relationships
 
     @NSManaged open
-    var menu: DDVenueCategory?
+    var category: DDVenueCategory?
 
 }
 

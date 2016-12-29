@@ -16,11 +16,11 @@ class DDVenueAdapter: NSObject {
 
     // Fetch venue details
     // * Venue ID
-    class func details(venue: DDVenue)-> Promise<DDVenueMenu?> {
+    class func details(venue: DDVenue)-> Promise<DDVenue?> {
         
         // Netman
         let netman = DDNetworkingManager.shared
-        return netman.request(.get, path: "restaurant/\(venue.modelID)/menu", version: "v2").then { response-> DDVenueMenu? in
+        return netman.request(.get, path: "restaurant/\(venue.modelID)/menu", version: "v2").then { response-> DDVenue? in
             
             do {
                 
@@ -29,7 +29,11 @@ class DDVenueAdapter: NSObject {
                     
                     // Enumerating
                     for categoryJSON in categoriesArray {
-                     
+                        
+                        // Fetching category
+                        let category = try DDVenueCategory.modelFetchOrInsert(json: categoryJSON)
+                        
+                        
                         
                     }
                 }

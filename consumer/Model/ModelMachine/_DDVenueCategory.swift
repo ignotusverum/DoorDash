@@ -5,9 +5,13 @@ import Foundation
 import CoreData
 
 public enum DDVenueCategoryAttributes: String {
+    case headerImageString = "headerImageString"
+    case isCathering = "isCathering"
+    case name = "name"
+    case openHours = "openHours"
     case sortID = "sortID"
+    case statusString = "statusString"
     case subtitle = "subtitle"
-    case title = "title"
 }
 
 public enum DDVenueCategoryRelationships: String {
@@ -50,13 +54,25 @@ open class _DDVenueCategory: DDModel {
     // MARK: - Properties
 
     @NSManaged open
+    var headerImageString: String?
+
+    @NSManaged open
+    var isCathering: Bool
+
+    @NSManaged open
+    var name: String?
+
+    @NSManaged open
+    var openHours: AnyObject?
+
+    @NSManaged open
     var sortID: Int
 
     @NSManaged open
-    var subtitle: String?
+    var statusString: String?
 
     @NSManaged open
-    var title: String?
+    var subtitle: String?
 
     // MARK: - Relationships
 
