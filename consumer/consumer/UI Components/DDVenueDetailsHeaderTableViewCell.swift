@@ -29,7 +29,7 @@ class DDVenueDetailsHeaderTableViewCell: UITableViewCell {
             
             if venue.asapTimeMin > 0 {
                 
-                self.timeLabel.text = "\(venue.asapTimeMin) min"
+                self.timeLabel.text = "Free delivery in \(venue.asapTimeMin) min"
             }
         }
     }
