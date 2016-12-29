@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 
+import SVProgressHUD
+
 @UIApplicationMain
 class DDAppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,8 +18,8 @@ class DDAppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        // Test
-        DDVenueAdapter.fetch(lat: 37.42274, lng: -122.139956)
+        // Mask type
+        SVProgressHUD.setDefaultMaskType(.Black)
         
         // Setup DB
         self.setupDB()
