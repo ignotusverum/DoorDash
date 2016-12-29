@@ -17,15 +17,15 @@ public enum DDVenueItemRelationships: String {
     case menu = "menu"
 }
 
-open class _DDVenueItem: NSManagedObject {
+open class _DDVenueItem: DDModel {
 
     // MARK: - Class methods
 
-    open class func entityName () -> String {
+    override open class func entityName () -> String {
         return "DDVenueItem"
     }
 
-    open class func entity(managedObjectContext: NSManagedObjectContext) -> NSEntityDescription? {
+    override open class func entity(managedObjectContext: NSManagedObjectContext) -> NSEntityDescription? {
         return NSEntityDescription.entity(forEntityName: self.entityName(), in: managedObjectContext)
     }
 

@@ -14,5 +14,20 @@ import PromiseKit
 @objc(DDVenueItem)
 open class DDVenueItem: _DDVenueItem {
 
-	// MARK: - Fetching logic
+    // MARK: - Fetching logic
+    class func fetchObject(objectID: Int, context: NSManagedObjectContext = NSManagedObjectContext.mr_rootSaving()) throws -> DDVenueItem? {
+        
+        return try DDVenueItem.modelFetch(objectID: objectID, context:context) as? DDVenueItem
+    }
+    
+    class func fetchOrInsert(json: JSON, context: NSManagedObjectContext = NSManagedObjectContext.mr_rootSaving()) throws -> DDVenueItem? {
+        
+        return try DDVenueItem.modelFetchOrInsert(json:
+            json, context: context) as? DDVenueItem
+    }
+    
+    override func setValue(json: JSON, context: NSManagedObjectContext) {
+        
+        super.setValue(json: json)
+    }
 }

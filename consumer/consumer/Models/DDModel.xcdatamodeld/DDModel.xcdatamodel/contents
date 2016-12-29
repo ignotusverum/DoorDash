@@ -35,7 +35,7 @@
         <relationship name="menus" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DDCategoryMenu" inverseName="category" inverseEntity="DDCategoryMenu" syncable="YES"/>
         <relationship name="venue" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DDVenue" inverseName="category" inverseEntity="DDVenue" syncable="YES"/>
     </entity>
-    <entity name="DDVenueItem" representedClassName="DDVenueItem" syncable="YES">
+    <entity name="DDVenueItem" representedClassName="DDVenueItem" parentEntity="DDModel" syncable="YES">
         <attribute name="itemDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="minAge" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
