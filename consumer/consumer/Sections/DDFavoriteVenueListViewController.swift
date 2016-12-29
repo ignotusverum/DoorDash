@@ -12,6 +12,17 @@ import CoreData
 class DDFavoriteVenueListViewController: DDVenueListViewController {
 
     // MARK: - Contoller lifecycle
+    override func viewDidLoad() {
+        // Set title
+        self.setTitle("DoorDash")
+        
+        // Load cell nib
+        self.cellSetup()
+        
+        // Disable empty dividers
+        self.tableView.tableFooterView = UIView(frame: CGRect.zero)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         

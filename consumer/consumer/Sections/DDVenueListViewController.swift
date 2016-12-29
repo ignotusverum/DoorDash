@@ -34,8 +34,12 @@ class DDVenueListViewController: UIViewController {
             // Fetch data based on location
             DDVenueAdapter.fetch(lat: location.coordinate.latitude, lng: location.coordinate.longitude).then { result-> Void in
                 
-                // Update datasource
-                self.datasource = result
+                // Update datasource + sort
+                self.datasource = result.sorted {
+                    
+                    guard let name0 = $0.name, let name1 = $1.name else { return false }
+                    return name0 < name1
+                }
                 self.tableView.reloadData()
                 
                 }.catch { error-> Void in
