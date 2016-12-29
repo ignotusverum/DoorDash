@@ -23,7 +23,7 @@ class DDVenueAdapter: NSObject {
         return netman.request(.get, path: "restaurant/\(venue.modelID)/menu", version: "v2").then { response-> DDVenueMenu? in
             
             do {
-             
+                
                 // Fetch object
                 let menu = try DDVenueMenu.fetchOrInsert(json: response)
                 menu?.venue = venue

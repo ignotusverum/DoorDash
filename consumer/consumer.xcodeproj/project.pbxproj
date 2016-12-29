@@ -47,6 +47,8 @@
 		F58A57231E13641400D0193C /* DDVenueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A57211E13641400D0193C /* DDVenueTableViewCell.swift */; };
 		F58A57241E13641400D0193C /* DDVenueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F58A57221E13641400D0193C /* DDVenueTableViewCell.xib */; };
 		F58A57321E1410DE00D0193C /* DDVenueDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A57311E1410DE00D0193C /* DDVenueDetailsViewController.swift */; };
+		F58A57351E1498E600D0193C /* DDVenueDetailsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A57331E1498E600D0193C /* DDVenueDetailsHeaderTableViewCell.swift */; };
+		F58A57361E1498E600D0193C /* DDVenueDetailsHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F58A57341E1498E600D0193C /* DDVenueDetailsHeaderTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,8 @@
 		F58A57211E13641400D0193C /* DDVenueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDVenueTableViewCell.swift; sourceTree = "<group>"; };
 		F58A57221E13641400D0193C /* DDVenueTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDVenueTableViewCell.xib; sourceTree = "<group>"; };
 		F58A57311E1410DE00D0193C /* DDVenueDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDVenueDetailsViewController.swift; sourceTree = "<group>"; };
+		F58A57331E1498E600D0193C /* DDVenueDetailsHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDVenueDetailsHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		F58A57341E1498E600D0193C /* DDVenueDetailsHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDVenueDetailsHeaderTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +236,8 @@
 			children = (
 				F58A57211E13641400D0193C /* DDVenueTableViewCell.swift */,
 				F58A57221E13641400D0193C /* DDVenueTableViewCell.xib */,
+				F58A57331E1498E600D0193C /* DDVenueDetailsHeaderTableViewCell.swift */,
+				F58A57341E1498E600D0193C /* DDVenueDetailsHeaderTableViewCell.xib */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -312,6 +318,7 @@
 				F58A57241E13641400D0193C /* DDVenueTableViewCell.xib in Resources */,
 				F58A57191E135CEE00D0193C /* Atrian_1.otf in Resources */,
 				F58A56CD1E133B5C00D0193C /* Main.storyboard in Resources */,
+				F58A57361E1498E600D0193C /* DDVenueDetailsHeaderTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +397,7 @@
 				F58A57041E1348F600D0193C /* _DDVenueMenu.swift in Sources */,
 				F58A571B1E135D1600D0193C /* DDFont.swift in Sources */,
 				F58A570F1E135B4900D0193C /* DDVenueListViewController.swift in Sources */,
+				F58A57351E1498E600D0193C /* DDVenueDetailsHeaderTableViewCell.swift in Sources */,
 				F58A56C81E133B5C00D0193C /* DDAppDelegate.swift in Sources */,
 				F58A57001E1348F600D0193C /* DDVenueMenu.swift in Sources */,
 				F58A57081E134C5B00D0193C /* DDModel.swift in Sources */,

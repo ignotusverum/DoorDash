@@ -13,17 +13,8 @@ class DDVenueDetailsViewController: UIViewController {
     // Venue
     var venue: DDVenue?
 
-    // Venue Image view
-    @IBOutlet weak var imageView: UIImageView!
-    
-    // Delivery Time Label
-    @IBOutlet weak var timeLabel: UILabel!
-    
     // Table View
     @IBOutlet weak var tableView: UITableView!
-    
-    // Fav Button
-    @IBOutlet weak var favoriteButton: UIButton!
     
     // MARK: - Controller lifecycle
     override func viewDidLoad() {
@@ -46,11 +37,6 @@ class DDVenueDetailsViewController: UIViewController {
         guard let menu = venue.menu else { return }
         
         print(menu)
-    }
-    
-    // MARK: - Actions
-    @IBAction func favoriteButtonPressed(_ sender: UIButton) {
-        
     }
 }
 
