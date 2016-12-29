@@ -43,7 +43,10 @@ class DDVenueDetailsViewController: UIViewController {
     func cellsSetup() {
         
         let headerCellNib = UINib(nibName: "DDVenueDetailsHeaderTableViewCell", bundle: nil)
+        let menuCellNib = UINib(nibName: "DDMenuTableViewCell", bundle: nil)
+        
         tableView.register(headerCellNib, forCellReuseIdentifier: "DDVenueDetailsHeaderTableViewCell")
+        tableView.register(menuCellNib, forCellReuseIdentifier: "DDMenuTableViewCell")
     }
     
     // MARK: - UI Setup
@@ -80,7 +83,7 @@ extension DDVenueDetailsViewController: UITableViewDataSource {
         }
         
         // Menu cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! DDMenuTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DDMenuTableViewCell", for: indexPath) as! DDMenuTableViewCell
         
         let menu = self.menusDatasource[indexPath.row]
         cell.menu = menu

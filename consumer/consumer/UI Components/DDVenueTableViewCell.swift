@@ -67,6 +67,13 @@ class DDVenueTableViewCell: UITableViewCell {
     // Delivery time Label
     @IBOutlet weak var timeLabel: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        venueImageView.layer.cornerRadius = 4.0
+        venueImageView.clipsToBounds = true
+    }
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         

@@ -46,6 +46,13 @@ class DDVenueDetailsHeaderTableViewCell: UITableViewCell {
     // Favorite button closure
     var favoriteClosure: ((_ result: Bool) -> ())?
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        venueImageView.layer.cornerRadius = 8.0
+        venueImageView.clipsToBounds = true
+    }
+    
     // Favorite
     func favoritePressed(completion: ((_ result: Bool) -> ())?) {
         
