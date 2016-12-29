@@ -88,6 +88,9 @@
                                 <state key="normal" title="Confirm Address">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="confirmButtonPressed:" destination="JXs-I9-nZb" eventType="touchUpInside" id="Fsw-Zo-cdS"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3fO-dP-qD5">
                                 <rect key="frame" x="0.0" y="483" width="375" height="50"/>

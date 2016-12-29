@@ -88,6 +88,8 @@ class DDVenueListViewController: UIViewController {
         let sb = self.storyboard
         let mapVC = sb?.instantiateViewController(withIdentifier: "DDMapSelectionViewController") as! DDMapSelectionViewController
         
+        self.presentVC(mapVC)
+        
         mapVC.confirmPressed { coordinate in
             
             self.fetchVenuesWith(coordinate: coordinate)
