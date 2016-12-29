@@ -120,8 +120,6 @@ extension DDVenueListViewController: UITableViewDataSource {
 
         let venue = self.datasource[indexPath.row]
         
-        print(venue)
-        
         cell!.venue = venue
         
         return cell!
