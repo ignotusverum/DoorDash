@@ -29,5 +29,7 @@ open class DDVenueMenu: _DDVenueMenu {
     override func setValue(json: JSON, context: NSManagedObjectContext) {
         
         super.setValue(json: json)
+        
+        
     }
 }
