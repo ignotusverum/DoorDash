@@ -48,6 +48,9 @@ class DDVenueListViewController: UIViewController {
             // Location retreiveing went wrong - show error
             self.showOneButtonAlertController(title: "Whoops", message: error.localizedDescription, cancelButtonText: "Ok")
         }
+        
+        // Disable empty dividers
+        self.tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
     
     // MARK: - Cell Loading

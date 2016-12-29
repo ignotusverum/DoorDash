@@ -12,7 +12,10 @@ class DDVenueDetailsViewController: UIViewController {
 
     // Venue
     var venue: DDVenue?
-
+    
+    // Menu datasource
+    var menusDatasource = [DDCategoryMenu]()
+    
     // Table View
     @IBOutlet weak var tableView: UITableView!
     
@@ -28,6 +31,9 @@ class DDVenueDetailsViewController: UIViewController {
         
         // Setup UI based on venue info
         self.setupUI(venue)
+        
+        // Disable empty dividers
+        self.tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
     
     // MARK: - UI Setup
@@ -36,7 +42,10 @@ class DDVenueDetailsViewController: UIViewController {
         // Safety check
         guard let menu = venue.category else { return }
         
-        print(menu)
+        // Menus objects
+        self.menusDatasource = menu.menus.allObjects as! [DDCategoryMenu]
+        
+        print(self.menusDatasource)
     }
 }
 
@@ -44,14 +53,26 @@ class DDVenueDetailsViewController: UIViewController {
 extension DDVenueDetailsViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return menusDatasource.count > 0 ? 2 : 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return section == 1 ? menusDatasource.count : 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
+    }
+}
+
+extension DDVenueDetailsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return indexPath.section == 0 ? 230 : 45
     }
 }
