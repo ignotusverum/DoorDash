@@ -51,6 +51,12 @@ class DDVenueDetailsHeaderTableViewCell: UITableViewCell {
         
         venueImageView.layer.cornerRadius = 8.0
         venueImageView.clipsToBounds = true
+        
+        favoriteButton.layer.borderColor = UIColor.defaultColor.cgColor
+        favoriteButton.layer.borderWidth = 1.0
+        
+        favoriteButton.layer.cornerRadius = 4.0
+        favoriteButton.clipsToBounds = true
     }
     
     // Favorite
