@@ -27,27 +27,53 @@ class DDVenueAdapter: NSObject {
                 // Getting category arraay
                 if let categoriesArray = response.array {
                     
-                    // Enumerating
+                    // Enumerating category array
                     for categoryJSON in categoriesArray {
                         
-                        // Fetching category
-                        let category = try DDVenueCategory.modelFetchOrInsert(json: categoryJSON)
+                        // Insering category object
+                        let category = try DDVenueCategory.fetchOrInsert(json: categoryJSON)
+                        // Update venue object
+                        venue.category = category
                         
-                        
-                        
+                        // Getting menu array from category json
+                        if let menuArray = categoryJSON["menu_categories"].array {
+                            
+                            // Enumerate menu array
+                            for menuJSON in menuArray {
+                             
+                                // Insering menu object
+                                let menu = try DDCategoryMenu.fetchOrInsert(json: menuJSON)
+                                // Updating category object
+                                if let menu = menu {
+                                 
+                                    category?.addMenusObject(menu)
+                                    
+                                    // Getting items array from menu json
+                                    if let itemsArray = menuJSON["items"].array {
+                                        
+                                        // Parse items
+                                        for itemJSON in itemsArray {
+                                            
+                                            // Inserting item menu object
+                                            let item = try DDVenueItem.fetchOrInsert(json: itemJSON)
+                                            // Updating menu object
+                                            if let item = item {
+                                                
+                                                menu.addItemsObject(item)
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
-                
-                // Fetch object
-//                let menu = try DDVenueMenu.fetchOrInsert(json: response)
-//                menu?.venue = venue
-//                venue.menu = menu
                 
                 // Save changes
                 try NSManagedObjectContext.mr_rootSaving().save()
                 
                 // Return result
-                return nil
+                return venue
             }
             catch {
                 return nil
