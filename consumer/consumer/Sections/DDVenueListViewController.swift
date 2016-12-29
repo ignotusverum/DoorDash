@@ -18,6 +18,10 @@ class DDVenueListViewController: UIViewController {
     // Datasource
     var datasource = [DDVenue]()
     
+    // Search bar
+    lazy var searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, w: 0.0, h: 20))
+    var searchBarIsPresented = false
+    
     // MARK: - Controller lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +62,25 @@ class DDVenueListViewController: UIViewController {
         self.tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
     
+    // MARK: - Search bar
+    func searchBar(show: Bool) {
+        
+        self.searchBarIsPresented = show
+        
+        if show {
+            self.searchBar = UISearchBar(frame: CGRect(x: 40.0, y: 0.0, w: self.view.frame.width - 40.0, h: 20.0))
+            
+            searchBar.placeholder = "Search"
+            
+            self.navigationItem.titleView = searchBar
+            
+            return
+        }
+        
+        // Return title
+        self.setTitle("Door Dash")
+    }
+    
     // MARK: - Cell Loading
     func cellSetup() {
         
@@ -72,6 +95,7 @@ class DDVenueListViewController: UIViewController {
     
     @IBAction func searchButtonPressed(_ sender: UIButton) {
         
+        self.searchBar(show: !searchBarIsPresented)
     }
 }
 
